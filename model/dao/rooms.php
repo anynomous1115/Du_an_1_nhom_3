@@ -15,7 +15,7 @@ function room_insert($room_name, $img, $description, $room_price, $type_id){
 }
 function room_delete($room_id){
     $sql = "delete from rooms where room_id = ?";
-    pdo_executue($sql, $room_id);
+    pdo_execute($sql, $room_id);
 }
 function room_update($room_id, $room_name, $img, $description, $room_price, $type_id){
     $sql = "update rooms set room_name =?, img=?, description=?, room_price=?, type_id=? where room_id= ?";
