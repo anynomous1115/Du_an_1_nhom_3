@@ -1,4 +1,4 @@
-<?php?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -139,3 +139,4 @@
 </body>
 <script src="./model/content/js/index.js"></script>
 </html>
+
