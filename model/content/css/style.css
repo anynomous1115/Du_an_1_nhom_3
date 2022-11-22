@@ -10,7 +10,7 @@ html {
 
 .main {
     max-width: 1280px;
-    position: absolute;
+    margin: 0 auto;
 
 }
 
