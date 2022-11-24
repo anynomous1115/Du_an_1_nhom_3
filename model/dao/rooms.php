@@ -21,3 +21,7 @@ function room_update($room_id, $room_name, $img, $description, $room_price, $typ
     $sql = "update rooms set room_name =?, img=?, description=?, room_price=?, type_id=? where room_id= ?";
     pdo_execute($sql,$room_name, $img, $description, $room_price, $type_id, $room_id );
 }
+function room_getinfo($room_id){
+    $sql = "select * from rooms where room_id=?";
+    return pdo_query_one($sql,$room_id);
+}

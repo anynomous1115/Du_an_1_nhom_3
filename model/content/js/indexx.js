@@ -1,6 +1,6 @@
 // SLIDER
 var img = [];
-for(var i = 1; i <=6; i++){
+for(var i = 1; i <6; i++){
     img[i] = new Image();
     img[i].src = "./model/content/image/slider/img_"+i+".jpg";
 }
@@ -14,8 +14,9 @@ function before(){
 }
 function after(){
     index++
-    if(index > img.length-1){
-        index = 1;
+    if(index >= 5){
+        index = 0;
     }
     image.src = img[index].src
 }
+setInterval("after()",1500);
