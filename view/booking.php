@@ -1,39 +1,13 @@
+
 <body>
-    
        <div class="content">
         <div class="title">
             <h1>Đặt phòng</h1>
         </div>
         <form action="">
-        <table>
-            <tr>
-                <td>Chi tiết đặt phòng</td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>Loại phòng</td>
-                <td>Số phòng</td>
-                <td>Số người</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td><select name="">
-                    <?php foreach ($list_type as $loaiphong){
-                        extract($loaiphong);
-                        echo '<option value="'.$type_id.'">'.$type_name.'</option>';
-                    }
-                    ?>
-                </select></td>
-                <td><input type="number"></td>
-                <td><input type="number"></td>
-                <td><button>Xóa</button></td>
-            </tr>
-        </table>
         Ngày đến
         <br>
-        <input type="date" name="" id="">
+        <input type="date" name="">
         <br>
         Ngày đi
         <br>
@@ -44,15 +18,15 @@
         </h3>
         Họ tên
         <br>
-        <input type="text" name="">
+        <input type="text" name="" class="input_booking">
         <br>
         SĐT
         <br>
-        <input type="text" name="">
+        <input type="text" name="" class="input_booking">
         <br>
         Email
         <br>
-        <input type="text" name="">
+        <input type="text" name="" class="input_booking">
         <br>
         Ghi chú
         <br>

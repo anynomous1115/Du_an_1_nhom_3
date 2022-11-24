@@ -1,71 +1,52 @@
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../model/content/css/stylex.css">
-    <link rel="stylesheet" href="../model/content/css/font_icon/fontawesome-free-6.2.0-web/css/all.min.css">
-    
-</head>
+<?php
+extract($one_room);
+$hinh = $hinhpath .$img;
+$booking_room = "index.php?act=booking&room_id=".$room_id;
+?>
 <body>
     <section class="product">
         <div class="container">
             <div class="product-top">
                 Chi tiết phòng: 
             </div>
-
-            <div class="product-content row">
+                <?php foreach ($list_type as $type) {
+                    if ($type['type_id'] == $type_id) {
+                  echo  '<p>Loại phòng: </p> <input type="text" value="' . $type['type_name'] . '" id="typeroom" disabled>';
+                    }
+                } 
+                ?>
+        
+<?php
+        echo    '<div class="product-content row">
                 <div class="product-content-left row">
-<div class="product-content-left-big-img">
-<img src="../model/content/img/sp4.jfif" alt="">
+    <div class="product-content-left-big-img">
+        <img src="'.$hinh.'" alt="">
+    </div>
 </div>
-<div class="product-content-left-small-img">
-<img src="../model/content/img/sp5.png" alt="">
-<img src="../model/content/img/sp6.jfif" alt="">
-<img src="../model/content/img/sp7.png" alt="">
-<img src="../model/content/img/sp2.png" alt="">
-<img src="../model/content/img/sp5.jfif" alt="">
-<img src="../model/content/img/sp4.jfif" alt="">
-<img src="../model/content/img/sp8.jfif" alt="">
-</div>
-
-                </div>
 
                 <div class="product-content-right">
                     <div class="product-content-right-name">
-                        <h1>DELUXE TRIPLE</h1>
-                        <p>Mã phòng: P301</p>
-                       
+                        <h1>'.$room_name.'</h1>
+                        <p>P'.$room_id.'</p>         
                     </div>
                     <div class="product-content-right-icon row">
                         <div class="product-content-right-icon-item">
-                        <i class="fa-solid fa-person"></i> <p>3 người</p>
-                        </div>
-                        <div class="product-content-right-icon-item">
-                        <i class="fa-solid fa-bed"></i> <p>2 phòng ngủ</p>
-                        </div>
-                        <div class="product-content-right-icon-item">
-                        <i class="fa-solid fa-bath"></i> <p>2 nhà tắm</p>
+                        <i class="fa-solid fa-person"></i> <p>'.$room_people.'</p>
                         </div>
                     </div>
 
                     <div class="product-content-right-price">
-                        <p>10.500.000<sup>đ</sup></p>
+                        <p>'.$room_price.'<sup>đ</sup></p>
                     </div>
                     <div class="product-content-right-descroom">
-                        <p>
-VIRTUAL 360 VIEW
-Elegant spacious Deluxe Triple Rooms (27m2), furnished in modern style, offer extraordinary convenience and comfort. All rooms are equipped with marble bathrooms, one double bed and one single bed.</p>
+                        <p>'.$description.'</p>
                     </div>
                     <div class="product-content-right-button">
-                    <a href="index.php?act=booking" onclick="return confirm('Ban co chac chan muon dat phong?')"><button><i class="fa-solid fa-cart-flatbed-suitcase"></i> <p>Đặt phòng</p></button></a>  
+                    <a href="'.$booking_room.'"><button><i class="fa-solid fa-cart-flatbed-suitcase"></i> <p>Đặt phòng</p></button></a>  
                                    
                         <button><p>Đặt tại khách sạn</p></button>
-                    </div>
-                    
+                    </div>';
+                    ?>
                     <div class="product-content-right-tiennghi row">
                         <div class="product-content-right-tn-item">
                         <i class="fa-solid fa-check"></i> <p>Bàn tiếp tân [24 giờ]</p>
