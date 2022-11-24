@@ -402,3 +402,16 @@ transition: all 0.5 ease;
 .footer-1{
     padding-top: 30px;
 }
+.input_booking{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    width: 500px;
+}
+.btn-book button{
+    width: 100px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+button{
+    cursor: pointer;
+}

@@ -21,7 +21,7 @@
         echo '
         <div class="grid">
         <a href="'.$link_room.'"><img src="'.$hinh.'" alt=""></a>
-                        <p id="roomName">'.$room_name.'</p>
+        <p id="roomName">'.$room_name.'</p>
                         <div class="desc">
                             <p id="desc-1">37m<sup>2</sup></p>
                             <p id="desc-2">2 giường đơn</p>

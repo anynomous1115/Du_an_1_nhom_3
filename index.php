@@ -17,23 +17,22 @@ if(isset($_GET['act'])){
             break;
         case 'roomct':
             if (isset($_GET['room_id']) && ($_GET['room_id'] > 0)) {
-                $room_id = $_GET['room_id'];
-                $one_room = room_getinfo($room_id);
-                extract($one_room);
-
+              $one_room = room_getinfo($_GET['room_id']);
+            } 
+            $list_type = type_selectall();
                 include "view/roomct.php";
-            } else {
-                include "./view/home.php";
-            }
+                include "./view/footer.php";
             break;
             case 'booking':
                 include "view/booking.php";
                 break;
         default:
         include "view/home.php";
+        include "view/footer.php";
         break;
     }
 } else {
     include "view/home.php";
+    include "view/footer.php";
 }
 ?>
