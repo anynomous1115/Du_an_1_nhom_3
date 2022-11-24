@@ -1,6 +1,4 @@
-<?php
-include "./header.php";
-?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -40,6 +38,7 @@ include "./header.php";
                     <div class="product-content-right-name">
                         <h1>DELUXE TRIPLE</h1>
                         <p>Mã phòng: P301</p>
+                       
                     </div>
                     <div class="product-content-right-icon row">
                         <div class="product-content-right-icon-item">
@@ -62,7 +61,8 @@ VIRTUAL 360 VIEW
 Elegant spacious Deluxe Triple Rooms (27m2), furnished in modern style, offer extraordinary convenience and comfort. All rooms are equipped with marble bathrooms, one double bed and one single bed.</p>
                     </div>
                     <div class="product-content-right-button">
-                    <a href="" onclick="return confirm('Ban co chac chan muon dat phong?')"><button><i class="fa-solid fa-cart-flatbed-suitcase"></i> <p>Đặt phòng</p></button></a>                       
+                    <a href="index.php?act=booking" onclick="return confirm('Ban co chac chan muon dat phong?')"><button><i class="fa-solid fa-cart-flatbed-suitcase"></i> <p>Đặt phòng</p></button></a>  
+                                   
                         <button><p>Đặt tại khách sạn</p></button>
                     </div>
                     
@@ -131,6 +131,3 @@ Elegant spacious Deluxe Triple Rooms (27m2), furnished in modern style, offer ex
     </section>
 </body>
 </html>
-<?php
-include "./footer.php";
-?>

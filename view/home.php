@@ -12,7 +12,31 @@
             <div class="room">
                 <p>Room class</p>
                 <div class="roomGrid">
-                    <div class="grid">
+                    <?php 
+                    foreach($loadroom as $room){
+                        extract ($room);
+                        $hinh = $hinhpath .$img;
+                        $link_room = "index.php?act=roomct&room_id=".$room_id;
+
+        echo '
+        <div class="grid">
+        <a href="'.$link_room.'"><img src="'.$hinh.'" alt=""></a>
+                        <p id="roomName">'.$room_name.'</p>
+                        <div class="desc">
+                            <p id="desc-1">37m<sup>2</sup></p>
+                            <p id="desc-2">2 giường đơn</p>
+                        </div>
+                        <p id="price">Chỉ từ <span>'.$room_price.'</span> /đêm</p>
+                        <div class="btn">
+                            <button>Book</button>
+                        </div>
+                    </div>
+        ';
+                    }
+                    
+                    ?>
+                 
+                    <!-- <div class="grid">
                         <img src="./model/content/image/3d-rendering-beautiful-comtemporary-luxury-bedroom-suite-hotel-with-tv.jpg" alt="">
                         <p id="roomName">Single Bedroom</p>
                         <div class="desc">
@@ -34,19 +58,7 @@
                         <p id="price">Chỉ từ <span>1,512,000 VNĐ</span> /đêm</p>
                         <div class="btn">
                             <button>Book</button>
-                        </div>
-                    </div>
-                    <div class="grid">
-                        <img src="./model/content/image/3d-rendering-beautiful-comtemporary-luxury-bedroom-suite-hotel-with-tv.jpg" alt="">
-                        <p id="roomName">Single Bedroom</p>
-                        <div class="desc">
-                            <p id="desc-1">37m<sup>2</sup></p>
-                            <p id="desc-2">2 giường đơn</p>
-                        </div>
-                        <p id="price">Chỉ từ <span>1,512,000 VNĐ</span> /đêm</p>
-                        <div class="btn">
-                            <button>Book</button>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
