@@ -2,7 +2,7 @@
 include "header.php";
 include "../model/dao/pdo.php";
 include "../model/dao/rooms.php";
-include "../model/dao/booking.php.php";
+include "../model/dao/booking.php";
 include "../model/dao/loaiphong.php";
 include "../model/dao/service.php";
 include "../model/dao/user.php";
