@@ -229,9 +229,9 @@ button {
 }
 
 .slider img {
-    width: 96%;
+    width: 95%;
     height: 708px;
-    margin-left: 2%;
+   
     margin-top: 50px;
     border-radius: 10px;
     position: absolute;
@@ -260,13 +260,135 @@ button {
 .left {
     position: relative;
     top: 300px;
-    left: 26px;
+    left: 2px;
 }
 .right{
     position: relative;
     top: 350px;
-    left: 1210px;
+    left: 1250px;
 }
+/* product */
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+.product{
+padding: 100px 0;
+}
+.product-top{
+    font-family: var(--main-text-font);
+    margin: 0 12px;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+.product-content-left{
+    width: 50%;
+}
+
+.product-content-left-big-img{
+    width: 80%;
+    padding-right: 20px;
+}
+.product-content-left-big-img img{
+    width: 100%;
+}
+.product-content-left-small-img{
+    width: 20%;
+}
+.product-content-left-small-img img{
+    width: 100%;
+}
+.product-content-right{
+    width: 50%;
+    padding-left: 20px;
+}
+.product-content-right-name{
+    font-family: var(--main-text-font);
+    margin: 0 12px;
+    font-size: 30px;
+}
+.product-content-right-name p{
+    color: #cccccc;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+.product-content-right-icon-item{
+    margin-left: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.product-content-right-icon-item p{
+    padding-left: 5px;
+}
+.product-content-right-price{
+    margin: 12px 0;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: var(--main-text-font);
+    margin-bottom: 25px;
+    margin-left: 15px;
+}
+.product-content-right-button button{
+width: 150px;
+height: 40px;
+display: block;
+margin: 20px 0 12px;
+transition: all 0.5 ease;
+}
+.product-content-right-button a{
+    text-decoration: none;
+}
+.product-content-right-button button:first-child{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 1px solid #f4f4f5;
+    cursor: pointer;
+}
+.product-content-right-button button:first-child:hover{
+    background-color: #cccccc;
+}
+.product-content-right-button button:last-child{
+    border: 2px solid #8f8a49;
+}
+.product-content-right-tiennghi{
+    border: 1px solid #cccccc;
+}
+.product-content-right-tn-item{
+    margin-left: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 15px;
+    margin-top: 10px;
+}
+.product-content-right-tn-item p{
+    padding-left: 5px;
+}
+/* Product-relate */
+.product-related{
+    margin-bottom: 50px;
+}
+.product-related-title{
+    margin: 20px 0;
+}
+.product-related-title p{
+    font-family: var(--main-text-font);
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+.product-relate-items{
+    width: 20%;
+    text-align: center;
+    padding: 0 6px;
+}
+.product-relate-items img{
+    width: 100%;
+}
+
 /* FOOTER */
 .footer{
  display: flex;
@@ -279,4 +401,17 @@ button {
 }
 .footer-1{
     padding-top: 30px;
+}
+.input_booking{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    width: 500px;
+}
+.btn-book button{
+    width: 100px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+button{
+    cursor: pointer;
 }

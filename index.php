@@ -37,16 +37,16 @@
             <img src="./model/content/image/beautiful-luxury-outdoor-swimming-pool-hotel-resort.jpg" alt="">
         </div>
         <div class="search">
-            <form action="./view/search.php" method="POST">
-            <div class="form" >
+            <form action="">
+            <div class="form">
                 <div class="checkIn">
-                    <input type="date" name="checkIn">
+                    <input type="date" >
                 </div>
                 <div class="checkOut">
-                    <input type="date" name="checkOut" >
+                    <input type="date" >
                 </div>
                 <div class="saerch_btn">
-                    <input type="submit" value="Book Now">
+                    <input type="button" value="Book Now">
                 </div>
             </div>
             </form>
