@@ -52,16 +52,16 @@
             <img src="./model/content/image/beautiful-luxury-outdoor-swimming-pool-hotel-resort.jpg" alt="">
         </div>
         <div class="search">
-            <form action="">
-            <div class="form">
+            <form action="index.php?act=search" method="POST">
+            <div class="form" >
                 <div class="checkIn">
-                    <input type="date" >
+                    <input type="date" name="checkIn" >
                 </div>
                 <div class="checkOut">
-                    <input type="date" >
+                    <input type="date" name = "checkOut" >
                 </div>
                 <div class="saerch_btn">
-                    <input type="button" value="Book Now">
+                    <a href="'index.php?act=search'"><input type="submit" value="Book Now"></a>
                 </div>
             </div>
             </form>
