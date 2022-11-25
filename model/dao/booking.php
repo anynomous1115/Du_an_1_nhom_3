@@ -40,3 +40,11 @@ function booking_detail_update($booking_id, $start_date, $end_date, $into_money,
     $sql = "update booking_detail set booking_id = ?, start_date = ?, end_date = ?, into_money = ? where booking_detail_id = ?";
     pdo_execute($sql ,$booking_id, $start_date, $end_date, $into_money, $booking_detail_id);
 }
+function booking_detail_check(){
+    $sql = "select room_id from booking_detail WHERE '2022-11-14' < start_date and '2022-11-14' < start_date or '2022-11-14' < end_date and '2022-11-14' < end_date";
+    return pdo_query($sql);
+}
+function booking_room($id){
+    $sql= "select * from rooms where room_id != ".$id." ";
+    return pdo_query($sql);
+}

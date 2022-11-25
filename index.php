@@ -1,4 +1,3 @@
-
 <?php
 include "global.php";
 include "model/dao/pdo.php";
@@ -11,6 +10,9 @@ $list_type = type_selectall();
 if(isset($_GET['act'])){
     $act = $_GET['act'];
     switch ($act){
+        case 'search':
+            include "view/search.php";
+            break;
         case 'room':
             $list_room = room_selectall();
             include "view/room.php";
