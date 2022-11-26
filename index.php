@@ -25,7 +25,7 @@
                 <ul>
                     <li><a href="">Home</a></li>
                     <li><a href="">Room</a></li>
-                    <li><a href="">Address</a></li>
+                    <li><a href="">Service</a></li>
                 </ul>
 
             </div>
@@ -37,7 +37,7 @@
             <img src="./model/content/image/beautiful-luxury-outdoor-swimming-pool-hotel-resort.jpg" alt="">
         </div>
         <div class="search">
-            <form action="">
+            <form action="" method="POST">
             <div class="form">
                 <div class="checkIn">
                     <input type="date" >
@@ -46,7 +46,7 @@
                     <input type="date" >
                 </div>
                 <div class="saerch_btn">
-                    <input type="button" value="Book Now">
+                    <button type="submit">Book Now</button>
                 </div>
             </div>
             </form>

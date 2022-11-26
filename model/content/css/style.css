@@ -99,9 +99,11 @@ html {
     border-radius: 10px;
 }
 
-.saerch_btn input {
+.saerch_btn button {
+    width: 200px;
+    height: 40px;
     border-radius: 10px;
-    background-color: rgba(229, 176, 45, 0.5);
+    background-color: rgba(231, 152, 33, 0.5);
 }
 
 /* CONTENT */
