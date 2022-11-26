@@ -48,3 +48,7 @@ function booking_room($id){
     $sql= "select * from rooms where room_id != ".$id." ";
     return pdo_query($sql);
 }
+function rooms_statistic(){
+    $sql = "select booking_detail_id, start_date, end_date, into_money, ro.room_name, us.full_name from rooms ro join booking_detail bkd on bkd.room_id = ro.room_id join booking bk on bkd.booking_id = bk.booking_id join users us on us.user_id = bk.user_id";
+    return pdo_query($sql);
+}
