@@ -27,6 +27,7 @@ if(isset($_GET['act'])){
             break;
             case 'booking':
                 include "view/booking.php";
+                include "./view/footer.php";
                 break;
         default:
         include "view/home.php";
