@@ -24,7 +24,7 @@
                 <a href="index.php" class="element">
                     <div>Dashboard</div>
                 </a>
-                <a href="index.php?act=addroom" class="element">
+                <a href="index.php?act=qlyphong" class="element">
                     <div>Quản lý phòng</div>
                 </a>
                 <a href="" class="element">
