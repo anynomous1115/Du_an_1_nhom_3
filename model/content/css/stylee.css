@@ -509,10 +509,7 @@ transition: all 0.5 ease;
     height: 35px;
     cursor: pointer;
 }
-.cart_content_right_button button:first-child{
-    background-color: #ffff;
-    border: 1px solid #333;
-}
+
 .cart_content_right_button button:first-child:hover{
     background-color: rgba(229, 176, 45, 0.5);
 }
@@ -531,6 +528,178 @@ transition: all 0.5 ease;
 }
 .cart_content_right_dangnhap p {
     
+    font-size: 18px;
+}
+
+/* booking */
+.book_conntent_left{
+    flex: 1;
+    border: 1px solid #dddd;
+    background-color: #dddd;
+    height: 400px;
+    margin-bottom: 15px;
+}
+.book_conntent_left_text{
+     background-color: rgba(229, 176, 45, 0.5);
+     margin-bottom: 20px;
+}
+.book_conntent_left_tt input{
+    border: 1px solid #e4e2e2;
+    width: 300px;
+    height: 30px;
+     margin-left:30px ;
+     margin-bottom: 15px;
+}
+.book_conntent_left_tt select{
+    border: 1px solid #e4e2e2;
+    width: 300px;
+    height: 30px;
+    margin-left: 100px;
+    margin-bottom: 15px;
+}
+.book_conntent_left_tt label{
+    margin-left: 50px;
+}
+.book_conntent_left_tt textarea{
+    width: 300px;
+    height: 30px;
+    border: 1px solid #dddd;
+}
+.book_conntent_right{
+    flex: 1.3;
+    margin-left: 25px;
+}
+.book_conntent_right_text{
+    background-color: rgba(229, 176, 45, 0.5);
+    margin-bottom: 15px;
+}
+.book_conntent_right_hotel{
+    border: 1px solid #cccccc;
+}
+.book_conntent_right_hotel_imgae{
+    width: 40%;
+    text-align: center;
+    padding:  10px 0px 10px 30px;
+}
+.book_conntent_right_hotel_imgae img{
+    width: 100%;
+}
+.book_conntent_right_hotel_list{
+    padding-top: 20px;
+    padding-left: 5px;
+}
+.book_conntent_right_hotel_list a{
+    text-decoration: none;
+}
+.book_conntent_right_hotel_list p{
+    font-size: 38px;
+    color: #333;
+    font-family: var(--main-text-font);
+}
+.book_conntent_right_hotel_list p:hover{
+    color: rgba(229, 176, 45, 0.5);
+}
+.book_conntent_right_hotel_list i{
+    color: #cccccc;
+}
+.book_conntent_right_hotel_list a{
+    text-decoration: none;
+    color: #cccccc;
+}
+.book_conntent_right_hotel_list a:hover{
+    color: rgba(229, 176, 45, 0.5);
+    text-decoration: underline;
+}
+.book_conntent_right_details-checkinout{
+    border-bottom: 2px solid #dddd;
+    margin-bottom: 20px;
+}
+.book_conntent_right_details{
+    margin-top: 20px;
+    border-bottom: 2px solid #dddd;
+}
+.book_conntent_right_details_left span{
+    font-weight: bold;
+    font-size: 15px;
+    color: #333;
+    font-family: var(--main-text-font);
+    padding-left: 100px;
+    padding-right: 70px;
+}
+.book_conntent_right_details_center{
+    font-weight: bold;
+    font-size: 20px;
+    color: rgba(229, 176, 45, 0.5);;
+    text-align: center;
+    margin-right: 80px;
+}
+.book_conntent_right_details_right span{
+    font-weight: bold;
+    font-size: 15px;
+    color: #333;
+    font-family: var(--main-text-font);
+}
+.book_conntent_right_details_lisst{
+    margin-bottom: 20px;
+}
+.book_conntent_right_details_lisst span{
+    font-size: 15px;
+    color: #333;
+    font-family: var(--main-text-font);
+}
+
+
+.books_content_right{
+    margin-top: 15px;
+    flex: 1;
+    padding-left: 12px;
+    border-left: 2px solid #dddd; 
+}
+.books_content_right table{
+    width: 95%;
+}
+.books_content_right table th{
+    padding-bottom: 30px;
+    font-size: 22px;
+    color: #333;
+    font-family: var(--main-text-font);
+    border-collapse: collapse;
+    border-bottom: 2px solid #dddd;
+}
+.books_content_right table td{
+    font-size: 18px;
+    color: #333;
+    font-family: var(--main-text-font);
+    padding: 6px 0;
+}
+.books_content_right tr:nth-child(3) td{
+    border-bottom: 2px solid #dddd;
+}
+.dam{
+    font-weight: bold;
+    font-size: 20px;
+}
+.books_content_right tr td:last-child{
+    text-align: right;
+}
+.books_content_right_text{
+    margin-bottom: 10px;
+}
+.books_content_right_text input{
+    margin: 20px 0 0 10px;
+    text-align: left;
+}
+.books_content_right_dangnhap{
+    text-align: center;
+    align-items: center;
+    margin-top: 15px;
+}
+.books_content_right_dangnhap p a{
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 15px;
+}
+.books_content_right_dangnhap p {
     font-size: 18px;
 }
 
