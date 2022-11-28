@@ -31,7 +31,7 @@ $booking_room = "index.php?act=booking&room_id=".$room_id;
                     </div>
                     <div class="product-content-right-icon row">
                         <div class="product-content-right-icon-item">
-                        <i class="fa-solid fa-person"></i> <p>'.$room_people.'</p>
+                        <i class="fa-solid fa-person"></i> <p>'.$room_people.' người</p> 
                         </div>
                     </div>
 

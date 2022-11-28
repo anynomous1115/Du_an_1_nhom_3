@@ -58,7 +58,7 @@
                 <div class="cart_content_right">
                    <table>
                     <tr>
-                        <th colspan="2">Tổng tiền giỏ hàng</th>
+                        <th colspan="2">Tổng tiền phòng</th>
                     </tr>
                     <tr>
                         <td>Tổng số phòng</td>
