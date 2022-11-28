@@ -64,12 +64,25 @@ if(isset($_GET['act'])){
             } 
             $list_type = type_selectall();
                 include "view/roomct.php";
-                include "./view/footer.php";
             break;
-            case 'booking':
-                include "view/booking.php";
-                include "./view/footer.php";
-                break;
+        case 'booking':
+            include "view/booking.php";
+            break;
+        case 'bookingok':
+            if(isset($_POST['start_date'])){
+             $user_id = $_SESSION['user']['user_id'];
+             $total_money = $_POST['total_money'];
+             $room_id = $_POST['room_id'];
+             $booking_date = date("Y-m-d");
+             $start_date = $_POST['start_date'];
+             $end_date = $_POST['end_date'];
+             $sql = "insert into booking(user_id, total, booking_date) values( '$user_id','$total_money','$booking_date')";
+             $booking_id = pdo_execute_get_id($sql);
+             booking_detail_insert($booking_id,$room_id, $start_date, $end_date, $total_money);
+             echo '<script>alert("Đặt phòng thành công")</script>';
+            }
+            echo $_POST['start_date'];
+             break;   
         default:
         include "view/home.php";
         include "view/footer.php";

@@ -1,21 +1,13 @@
 <?php
 extract($one_room);
 $hinh = $hinhpath .$img;
-$booking_room = "index.php?act=booking&room_id=".$room_id;
 $checkin= $_GET['checkin'];
 $checkout= $_GET['checkout'];
-echo $checkin;
-echo $checkout."<br>";
+$booking_room = "index.php?act=booking&&room_id=". $room_id . "&&checkin=" . $checkin . "&&checkout=" . $checkout;
 $d1=strtotime($checkin);
 $d =strtotime($checkout);
 $d2=ceil(($d-$d1)/60/60/24);
-echo $d2;
 ?>
-<script>
-    
-</script>
-<body>
-<input type="date" value="<?= $checkin ?>">
     <section class="product">
         <div class="container">
             <div class="product-top">
@@ -39,7 +31,7 @@ echo $d2;
                 <div class="product-content-right">
                     <div class="product-content-right-name">
                         <h1>'.$room_name.'</h1>
-                        <p>P'.$room_id.'</p>         
+                               
                     </div>
                     <div class="product-content-right-icon row">
                         <div class="product-content-right-icon-item">
@@ -48,7 +40,7 @@ echo $d2;
                     </div>
 
                     <div class="product-content-right-price">
-                        <p>'.$room_price.'<sup>đ</sup></p>
+                        <p>'.$room_price.'<sup>đ</sup>/đêm</p>
                     </div>
                     <div class="product-content-right-descroom">
                         <p>'.$description.'</p>
@@ -122,5 +114,5 @@ echo $d2;
         </div>
     </div>
     </section>
-</body>
-</html>
+</div>
+

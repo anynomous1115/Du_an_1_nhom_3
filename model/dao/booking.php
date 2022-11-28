@@ -28,9 +28,9 @@ function booking_detail_select_by_id($booking_detail_id){
     $sql = "select * from booking_detail where booking_detail_id = ?";
     return pdo_query_one($sql, $booking_detail_id);
 }
-function bookng_detail_insert($booking_id, $start_date, $end_date, $into_money){
-    $sql = "insert into booking_detail(booking_id, start_date,end_date, into_money) values(?, ?, ?, ?)";
-    pdo_execute($sql, $booking_id, $start_date, $end_date, $into_money);
+function booking_detail_insert($booking_id,$room_id, $start_date, $end_date, $into_money){
+    $sql = "insert into booking_detail(booking_id, room_id ,start_date,end_date, into_money) values(?, ?, ?, ?, ?)";
+    pdo_execute($sql, $booking_id,$room_id, $start_date, $end_date, $into_money);
 }
 function booking_detail_delete($booking_detail_id){
     $sql = "delete from booking_detail where booking_detail_id = ?";
