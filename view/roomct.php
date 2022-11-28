@@ -2,8 +2,20 @@
 extract($one_room);
 $hinh = $hinhpath .$img;
 $booking_room = "index.php?act=booking&room_id=".$room_id;
+$checkin= $_GET['checkin'];
+$checkout= $_GET['checkout'];
+echo $checkin;
+echo $checkout."<br>";
+$d1=strtotime($checkin);
+$d =strtotime($checkout);
+$d2=ceil(($d-$d1)/60/60/24);
+echo $d2;
 ?>
+<script>
+    
+</script>
 <body>
+<input type="date" value="<?= $checkin ?>">
     <section class="product">
         <div class="container">
             <div class="product-top">

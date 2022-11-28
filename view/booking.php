@@ -1,4 +1,8 @@
-
+<?php
+session_start();
+$checkin = $_GET['checkin'];
+$checkout = $_GET['checkout'];
+?>
 <body>
        <div class="content">
         <div class="title">
@@ -7,26 +11,26 @@
         <form action="">
         Ngày đến
         <br>
-        <input type="date" name="">
+        <input type="date" name="" value="<?= $checkin?>">
         <br>
         Ngày đi
         <br>
-        <input type="date">
+        <input type="date" value="<?= $checkout?>">
         <br>
         <h3>
             Thông tin người đặt phòng
         </h3>
         Họ tên
         <br>
-        <input type="text" name="" class="input_booking">
+        <input type="text" name="" class="input_booking" value="<?= $_SESSION['user']['full_name'] ?>">
         <br>
         SĐT
         <br>
-        <input type="text" name="" class="input_booking">
+        <input type="text" name="" class="input_booking" value="<?= $_SESSION['user']['phone_number'] ?>">
         <br>
         Email
         <br>
-        <input type="text" name="" class="input_booking">
+        <input type="text" name="" class="input_booking" value="<?= $_SESSION['user']['email'] ?>">
         <br>
         Ghi chú
         <br>
