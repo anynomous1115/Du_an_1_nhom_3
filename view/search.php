@@ -38,22 +38,8 @@ if (empty($room_id)) {
             </div>
         </form>
     </div>
-    <div class="rooms">
-        <div class="roomId">
-            <a href=""><img src="model/content/img/andrew-neel-T0eb55DxDN4-unsplash-600x600.jpg" alt=""></a>
-            <div class="infor">
-                <a href="">
-                    <p id="name">ROOM D1</p>
-                </a>
-                <i class="fa-solid fa-person"></i><span> 2 Người lớn</span>
-                <i class="fa-solid fa-bed"></i><span> 1 Giường đôi</span>
-                <i class="fa-solid fa-house"></i><span>35m<sup>2</sup></span><br>
-                <p id="note">Hotale Suites has been honored with the prestigious Five-Star Award by Forbes.</p>
-                <i class="fa-solid fa-hand-holding-dollar"></i><span id="span_price">1.000.000 VNĐ</span>
-                <div class="roomId_btn"><button type="submit">Book Now</button></div>
-            </div>
-        </div>
-        <!-- <?php
+    <div class="rooms"> 
+        <?php
                 if (empty($rooms)) {
                     echo "Xin lỗi quý khách ngày mà quý khách tìm kiếm không còn phòng trống quý khách vui lòng sang ngày khác";
                 } else {
@@ -77,6 +63,6 @@ if (empty($room_id)) {
                         ';
                     }
                 }
-                ?>-->
+                ?>
     </div>
 </div>

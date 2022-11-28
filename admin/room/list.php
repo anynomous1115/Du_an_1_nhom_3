@@ -2,7 +2,7 @@
 
 <div>
     <h1>QUẢN LÝ PHÒNG</h1>
-    <table border = "1">
+    <table>
         <tr>
             <th>ID</th>
             <th>TÊN KHÁCH HÀNG</th>

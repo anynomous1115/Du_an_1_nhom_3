@@ -43,7 +43,7 @@ echo $d2;
                     </div>
                     <div class="product-content-right-icon row">
                         <div class="product-content-right-icon-item">
-                        <i class="fa-solid fa-person"></i> <p>'.$room_people.'</p>
+                        <i class="fa-solid fa-person"></i> <p>'.$room_people.' người</p> 
                         </div>
                     </div>
 
@@ -96,27 +96,27 @@ echo $d2;
         </div>
     <div class="product-content row">
         <div class="product-relate-items">
-            <img src="../model/content/img/sp2.png" alt="">
+            <img src="model/content/img/sp2.png" alt="">
             <h1>MOON West Lake</h1>
             <p>10.500.000<sup>đ</sup></p>
         </div>
         <div class="product-relate-items">
-            <img src="../model/content/img/sp2.png" alt="">
+            <img src="model/content/img/sp2.png" alt="">
             <h1>MOON West Lake</h1>
             <p>10.500.000<sup>đ</sup></p>
         </div>
         <div class="product-relate-items">
-            <img src="../model/content/img/sp2.png" alt="">
+            <img src="model/content/img/sp2.png" alt="">
             <h1>MOON West Lake</h1>
             <p>10.500.000<sup>đ</sup></p>
         </div>
         <div class="product-relate-items">
-            <img src="../model/content/img/sp2.png" alt="">
+            <img src="model/content/img/sp2.png" alt="">
             <h1>MOON West Lake</h1>
             <p>10.500.000<sup>đ</sup></p>
         </div>
         <div class="product-relate-items">
-            <img src="../model/content/img/sp2.png" alt="">
+            <img src="model/content/img/sp2.png" alt="">
             <h1>MOON West Lake</h1>
             <p>10.500.000<sup>đ</sup></p>
         </div>

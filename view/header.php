@@ -30,7 +30,7 @@
 
                 </div>
                 <div class="login">
-                    <?php
+                    <?php 
                     if (isset($_SESSION['user'])) {
                         echo "Xin chào " . $_SESSION['user']['full_name'] . "<br>";
                         echo '<a href= "index.php?act=dangxuat">Đăng xuất</a><br>';

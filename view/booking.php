@@ -4,58 +4,113 @@ $checkin = $_GET['checkin'];
 $checkout = $_GET['checkout'];
 ?>
 <body>
-       <div class="content">
-        <div class="title">
-            <h1>Đặt phòng</h1>
-        </div>
-        <form action="">
-        Ngày đến
+<div class="contaner">
+        <div class="book_conntent row">
+            <div class="book_conntent_left">
+                <div class="book_conntent_left_text">
+                    <h2>Thông tin liên hệ</h2>
+                </div>
+                <div class="book_conntent_left_wrap">
+                    <div class="book_conntent_left_tt">
+                    <form action="">
+        <label for="">Ngày nhận phòng:</label>
+        <input type="date" name="ngaynhanphong">
         <br>
-        <input type="date" name="" value="<?= $checkin?>">
+        <input type="date" name="">
         <br>
-        Ngày đi
+        <label for="">Ngày trả phòng:</label>
+        <input type="date" name="ngaytraphong">
         <br>
-        <input type="date" value="<?= $checkout?>">
+        <input type="date">
         <br>
-        <h3>
-            Thông tin người đặt phòng
-        </h3>
-        Họ tên
+        <label for="">SĐT:</label>
+        <input type="text" name="">
         <br>
-        <input type="text" name="" class="input_booking" value="<?= $_SESSION['user']['full_name'] ?>">
+        <input type="text" name="" class="input_booking">
         <br>
         SĐT
         <br>
-        <input type="text" name="" class="input_booking" value="<?= $_SESSION['user']['phone_number'] ?>">
+        <input type="text" name="" class="input_booking">
         <br>
         Email
         <br>
-        <input type="text" name="" class="input_booking" value="<?= $_SESSION['user']['email'] ?>">
+        <input type="text" name="" class="input_booking">
         <br>
         Ghi chú
         <br>
         <textarea name="" id="" cols="30" rows="10"></textarea>
-       <div class="btn-book">
-        <button>Đặt phòng</button>
+                 </form>
+          </div>
         </div>
-        </form>
-       </div>
-        <div class="footer">
-            <div class="footer-1">
-                <p>Trụ sở: Tòa nhà FPT Polytechnic, P. Trịnh Văn Bô, Xuân Phương, Nam Từ Liêm, Hà Nội</p>
-                <p>Email: caosonhai1410@gmail.com</p>
             </div>
-            <div class="footer-2">
-                <p>ĐIỀU KHOẢN & QUY ĐỊNH</p>
-                <p>Điều khoản chung</p>
-                <p>Quy định chung</p>
-                <p>Quy định về thanh toán</p>
-                <p>Quy định về xác nhận thông tin đặt phòng</p>
-                <p>Chính sách giải quyết tranh chấp</p>
-                <p>Chính sách quyền riêng tư</p>
+            <div class="book_conntent_right">
+            <div class="book_conntent_right_text">
+                    <h2>Thông tin phòng</h2>
             </div>
-        </div>
-    </div>
+            <div class="book_conntent_right_hotel row">
+                <div class="book_conntent_right_hotel_imgae">
+                   <img src="model/content/img/sp5.png" alt="">
+                </div>
+                <div class="book_conntent_right_hotel_list">
+                    <a href=""><p>Room P1</p></a>
+                    <i class="fa fa-thumbs-up"></i><a href="#"> 32 Đánh giá</a>
+                </div>
+            </div>
+            <div class="book_conntent_right_details">
+                <div class="book_conntent_right_details-checkinout row">
+                <div class="book_conntent_right_details_left">
+                    <span>NGÀY NHẬN PHÒNG</span><br>
+                     <span>26 Thg11, 2022</span>
+                </div>
+                <div class="book_conntent_right_details_center">
+                   <span><i class="fa-solid fa-clock"></i></span><br>
+                  <span class="col-xs-12">2 đêm</span>
+                </div>
+                <div class="book_conntent_right_details_right">
+                  <span>NGÀY TRẢ PHÒNG</span><br>
+                  <span>28 Thg11, 2022</span>
+                </div>
+                </div>
+                <div class="book_conntent_right_details_lisst">
+                <span><b>1</b> phòng Suite Hướng Vườn Hồ Bơi Riêng (Garden Pool Suite) - Ăn sáng dành cho 2 người
+                </span>
+                </div>
+            </div>
+            <div class="books_content_right">
+                <table>
+                <tr>
+                        <th colspan="2">Chi tiết giá phòng</th>
+                    </tr>
+                    <tr>
+                        <td>Tổng tiền phòng</td>
+                        <td><p>10000000<sup>đ</sup></p></td>
+                    </tr>
+                    <tr>
+                        <td>Tổng tiền</td>
+                        <td><p class="dam">20000000<sup>đ</sup></p></td>
+                    </tr>
+                </table>
+                <div class="books_content_right_tetx">
+                    <p><a href="">Nhập mã giảm giá</a></p>
+                </div>
+               
+                <div class="books_content_right_dangnhap">
+                    <p>Tài khoản hotelIQ</p>
+                    <p>hãy <a href="">Đăng nhập</a> tài khoản của bạn để tích điểm thành viên</p>
+                  </div>
+            </div>
+            
+            </div>
+        
+            <div class="books_content_right_text">
+                    <input type="checkbox">Tôi đã đọc và chấp nhận các chính sách của khách sạn, điều khoản & điều kiện, và chính sách quyền riêng tư 
+                    <div class="cart_content_right_button">
+                    <button>Đặt phòng</button>
+                  </div>
+            </div>
+            
+            
+ </div> 
 </body>
 <script src="./model/content/js/index.js"></script>
 </html>

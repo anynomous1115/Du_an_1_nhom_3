@@ -19,6 +19,7 @@ function after(){
     }
     image.src = img[index].src
 }
+
 setInterval("after()",1500);
 // Đối tượng `Validator`
 function Validator(options) {
