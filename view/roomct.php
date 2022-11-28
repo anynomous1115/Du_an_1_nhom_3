@@ -1,9 +1,13 @@
 <?php
 extract($one_room);
 $hinh = $hinhpath .$img;
-$booking_room = "index.php?act=booking&room_id=".$room_id;
+$checkin= $_GET['checkin'];
+$checkout= $_GET['checkout'];
+$booking_room = "index.php?act=booking&&room_id=". $room_id . "&&checkin=" . $checkin . "&&checkout=" . $checkout;
+$d1=strtotime($checkin);
+$d =strtotime($checkout);
+$d2=ceil(($d-$d1)/60/60/24);
 ?>
-<body>
     <section class="product">
         <div class="container">
             <div class="product-top">
@@ -27,7 +31,7 @@ $booking_room = "index.php?act=booking&room_id=".$room_id;
                 <div class="product-content-right">
                     <div class="product-content-right-name">
                         <h1>'.$room_name.'</h1>
-                        <p>P'.$room_id.'</p>         
+                               
                     </div>
                     <div class="product-content-right-icon row">
                         <div class="product-content-right-icon-item">
@@ -36,7 +40,7 @@ $booking_room = "index.php?act=booking&room_id=".$room_id;
                     </div>
 
                     <div class="product-content-right-price">
-                        <p>'.$room_price.'<sup>đ</sup></p>
+                        <p>'.$room_price.'<sup>đ</sup>/đêm</p>
                     </div>
                     <div class="product-content-right-descroom">
                         <p>'.$description.'</p>
@@ -84,31 +88,31 @@ $booking_room = "index.php?act=booking&room_id=".$room_id;
         </div>
     <div class="product-content row">
         <div class="product-relate-items">
-            <img src="../model/content/img/sp2.png" alt="">
+            <img src="model/content/img/sp2.png" alt="">
             <h1>MOON West Lake</h1>
             <p>10.500.000<sup>đ</sup></p>
         </div>
         <div class="product-relate-items">
-            <img src="../model/content/img/sp2.png" alt="">
+            <img src="model/content/img/sp2.png" alt="">
             <h1>MOON West Lake</h1>
             <p>10.500.000<sup>đ</sup></p>
         </div>
         <div class="product-relate-items">
-            <img src="../model/content/img/sp2.png" alt="">
+            <img src="model/content/img/sp2.png" alt="">
             <h1>MOON West Lake</h1>
             <p>10.500.000<sup>đ</sup></p>
         </div>
         <div class="product-relate-items">
-            <img src="../model/content/img/sp2.png" alt="">
+            <img src="model/content/img/sp2.png" alt="">
             <h1>MOON West Lake</h1>
             <p>10.500.000<sup>đ</sup></p>
         </div>
         <div class="product-relate-items">
-            <img src="../model/content/img/sp2.png" alt="">
+            <img src="model/content/img/sp2.png" alt="">
             <h1>MOON West Lake</h1>
             <p>10.500.000<sup>đ</sup></p>
         </div>
     </div>
     </section>
-</body>
-</html>
+</div>
+

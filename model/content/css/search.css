@@ -1,0 +1,169 @@
+
+
+
+
+
+:root {
+    --color: #474746;
+}
+
+
+/* HEADER */
+.header {}
+
+
+
+.logo img {
+    width: 150px;
+    height: 75px;
+}
+
+
+
+.title {
+    background-image: url(https://demo.goodlayers.com/hotale/resort/wp-content/uploads/sites/2/2022/01/resort-title-bg.jpg);
+    width: 100%;
+    height: 500px;
+    background-size: 100%;
+    color: #fff;
+    border-radius: 20px;
+    text-align: center;
+    margin-top: 100px;
+
+}
+
+.title>p {
+    padding-top: 250px;
+    font-size: 60px;
+    font-family: 'Jost', sans-serif;
+}
+
+/* ROOM SEARCH */
+.room_search {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 50px;
+}
+
+/* search_date */
+.search_dates {
+}
+
+.room_search .search_dates>p {
+    padding-top: 50px;
+    font-size: 30px;
+}
+
+.room_search .search_dates .checkOut,
+.room_search .search_dates .checkIn {
+    background-color: #f5f5f5;
+    margin-top: 50px;
+    border-radius: 5px;
+    height: 120px;
+}
+
+.checkIn .label,
+.checkOut .label {
+    padding: 20px 20px;
+    color: #656565;
+}
+
+.checkIn input,
+.checkOut input {
+    width: 200px;
+    height: 40px;
+    padding-left: 40px;
+    font-size: 15px;
+    color: #656565;
+}
+
+.checkIn .input,
+.checkOut .input {
+    padding-left: 20px;
+}
+
+.saerch_btn .btn {
+    margin-top: 50px;
+}
+
+.saerch_btn input {
+    width: 200px;
+    height: 40px;
+    border-radius: 5px;
+    border-style: none;
+    padding-top: 10px;
+    color: #FFFFFF;
+}
+
+/* room */
+.rooms {
+    width: 100%;
+    padding-left: 50px;
+    padding-top: 50px;
+}
+
+.roomId {
+    display: flex;
+    width: 100%;
+}
+
+.roomId img {
+    width: 90%;
+    border-radius: 15px;
+    transition: transform .5s, filter 1.5s ease-in-out;
+    /* filter: grayscale(100%); */
+}
+
+img:hover {
+    filter: grayscale(0);
+    transform: scale(1.1);
+}
+
+.infor {
+    padding-left: 0px;
+}
+.roomId{
+    padding-top: 20px;
+}
+.roomId .infor #name {
+    color: #065FBF;
+    padding-top: 15px;
+    text-align: center;
+    font-size: 30px;
+}
+.room .infor a{
+    text-decoration: none;
+    margin-left: 30px;
+    font-size: 20px;
+    color: #111;
+}
+a{
+    text-decoration: none;
+}
+.infor i {
+    padding-top: 30px;
+    padding-right: 10px;
+    font-size: 25px;
+}
+
+.infor span {
+    padding-right: 20px;
+    color:#656565
+}
+
+.infor #note {
+    padding-top: 30px;
+}
+
+#span_price {
+    font-size: 40px;
+}
+.infor .roomId_btn button{
+    width: 300px;
+    height: 40px;
+}
+.infor .roomId_btn{
+    padding-top: 30px;
+}
+/* footer */

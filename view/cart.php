@@ -37,7 +37,7 @@
                             <th>Xóa</th>
                         </tr>
                         <tr>
-                                <th><img src="../model/content/img/sp2.png" alt=""></th>
+                                <th><img src="model/content/img/sp2.png" alt=""></th>
                                 <th>Phòng 1</th>
                                 <th><p>10000000<sup>đ</sup></p></th>
                                 <th><input type="number" value="1" min="1"></th>
@@ -45,7 +45,7 @@
                                 <th><span>X</span></th>
                         </tr>
                         <tr>
-                                <th><img src="../model/content/img/sp5.png" alt=""></th>
+                                <th><img src="model/content/img/sp5.png" alt=""></th>
                                 <th>Phòng 1</th>
                                 <th><p>10000000<sup>đ</sup></p></th>
                                 <th><input type="number" value="1" min="1"></th>

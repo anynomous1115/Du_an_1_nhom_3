@@ -1,12 +1,12 @@
 <?php
 require_once 'pdo.php';
 
-function users_insert( $full_name, $phone_number ,$address, $CCCD_id, $birth_date, $user_name, $password, $gender, $nationality, $role){
-    $sql = "INSERT INTO khach_hang(full_name, phone_number ,address, CCCD_id, birth_date, user_name, password, gender, nationality, role) VALUES (?, ?, ?, ?, ?, ?)";
-    pdo_execute($sql, $full_name, $phone_number ,$address, $CCCD_id, $birth_date, $user_name, $password, $gender, $nationality, $role );
+function users_insert( $full_name, $phone_number ,$address, $CCCD_id, $birth_date,$email, $user_name, $password, $gender, $nationality, $role){
+    $sql = "INSERT INTO users(full_name, phone_number ,address, CCCD_id, birth_date, email, user_name, password, gender, nationality, role) VALUES (?, ?, ?, ?, ?, ?,?,?,?,?,?)";
+    pdo_execute($sql, $full_name, $phone_number ,$address, $CCCD_id, $birth_date,$email, $user_name, $password, $gender, $nationality, $role );
 }
 
-function khach_hang_update($user_id ,$full_name, $phone_number ,$address, $CCCD_id, $birth_date, $user_name, $password, $gender, $nationality, $role){
+function users_update($user_id ,$full_name, $phone_number ,$address, $CCCD_id, $birth_date, $user_name, $password, $gender, $nationality, $role){
     $sql = "UPDATE users SET full_name=?, phone_number=? ,address=?, CCCD_id=?, birth_date=?, user_name=?, password=?, gender=?, nationality=?, role=? WHERE ma_kh=?";
     pdo_execute($user_id ,$full_name, $phone_number ,$address, $CCCD_id, $birth_date, $user_name, $password, $gender, $nationality, $role);
 }
@@ -46,7 +46,7 @@ function check_email($email, $ho_ten){
     $sql = "select * from khach_hang where email='".$email."'AND ho_ten='".$ho_ten."' ";
     return pdo_query_one($sql);
 }
-function check_user($username,$password){
-    $sql = "select * from user where username='".$username."' AND password='".$password."'";
+function check_user($email,$password){
+    $sql = "select * from users where email='".$email."' AND password='".$password."'";
     return pdo_query_one($sql);
 }
