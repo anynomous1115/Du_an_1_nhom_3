@@ -25,9 +25,9 @@
                 </div>
                 <div class="nav">
                     <ul>
-                        <li><a href="#">Home</a></li>
+                        <li><a href="index.php">Home</a></li>
                         <li><a href="#about">About</a></li>
-                        <li><a href="#room">Room</a></li>
+                        <li><a href="index.php?act=room">Room</a></li>
                         <li><a href="#service">Service</a></li>
                     </ul>
 

@@ -25,8 +25,17 @@ $d2=ceil(($d-$d1)/60/60/24);
                 <div class="product-content-left row">
     <div class="product-content-left-big-img">
         <img src="'.$hinh.'" alt="">
-    </div>
+    </div>';
+?>
+<div class="product-content-left-small-img">
+    <img src="model/content/img/sp1.png" alt="">
+    <img src="model/content/img/sp2.png" alt="">
+    <img src="model/content/img/sp6.png" alt="">
+    <img src="model/content/img/sp5.png" alt="">
+    <img src="model/content/img/sp7.png" alt="">
 </div>
+</div>
+<?php echo'
 
                 <div class="product-content-right">
                     <div class="product-content-right-name">
@@ -86,32 +95,18 @@ $d2=ceil(($d-$d1)/60/60/24);
         <div class="product-related-title">
               <p>Các phòng khác liên quan</p>
         </div>
-    <div class="product-content row">
-        <div class="product-relate-items">
-            <img src="model/content/img/sp2.png" alt="">
-            <h1>MOON West Lake</h1>
-            <p>10.500.000<sup>đ</sup></p>
-        </div>
-        <div class="product-relate-items">
-            <img src="model/content/img/sp2.png" alt="">
-            <h1>MOON West Lake</h1>
-            <p>10.500.000<sup>đ</sup></p>
-        </div>
-        <div class="product-relate-items">
-            <img src="model/content/img/sp2.png" alt="">
-            <h1>MOON West Lake</h1>
-            <p>10.500.000<sup>đ</sup></p>
-        </div>
-        <div class="product-relate-items">
-            <img src="model/content/img/sp2.png" alt="">
-            <h1>MOON West Lake</h1>
-            <p>10.500.000<sup>đ</sup></p>
-        </div>
-        <div class="product-relate-items">
-            <img src="model/content/img/sp2.png" alt="">
-            <h1>MOON West Lake</h1>
-            <p>10.500.000<sup>đ</sup></p>
-        </div>
+        <div class="product-content row">
+<?php 
+foreach ($room_relate as $room){
+    extract($room);
+    $link_room = "index.php?act=roomct&room_id=".$room_id;
+    echo '        <div class="product-relate-items">
+    <a href="'. $link_room.'"><img src="'.$hinh.'" alt=""></a>
+    <h1>'.$room_name.'</h1>
+    <p>'.$room_price.'<sup>đ</sup></p>
+</div> ';
+}
+?> 
     </div>
     </section>
 </div>

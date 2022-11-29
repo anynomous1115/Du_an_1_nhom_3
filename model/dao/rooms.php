@@ -25,3 +25,7 @@ function room_getinfo($room_id){
     $sql = "select * from rooms where room_id=?";
     return pdo_query_one($sql,$room_id);
 }
+function room_relate_getinfo($room_id,$type_id){
+    $sql = "select * from rooms where type_id=".$type_id." AND room_id <> ".$room_id;
+    return pdo_query($sql);
+}
