@@ -36,7 +36,10 @@ if(isset($_GET['act'])){
             }
             include "view/dangki.php";
             break; 
-        case 'dangnhap':    
+        case 'dangnhap':
+            if($_GET['chuadangnhap']==1){
+                echo'<script>alert("Bạn phải đăng nhập để đặt phòng");</script>';
+            }    
             if (isset($_POST['email'])&& $_POST['email']) {
                 $email= $_POST['email'];
                 $password = $_POST['password'];
@@ -79,10 +82,14 @@ if(isset($_GET['act'])){
              $sql = "insert into booking(user_id, total, booking_date) values( '$user_id','$total_money','$booking_date')";
              $booking_id = pdo_execute_get_id($sql);
              booking_detail_insert($booking_id,$room_id, $start_date, $end_date, $total_money);
-             echo '<script>alert("Đặt phòng thành công")</script>';
+             header('Location: index.php?act=thanhcong');
             }
             echo $_POST['start_date'];
-             break;   
+             break;
+        case 'thanhcong':
+            echo '<script>alert("Đặt phòng thành công")</script>';
+            include 'view/home.php';
+            break;    
         default:
         include "view/home.php";
         include "view/footer.php";

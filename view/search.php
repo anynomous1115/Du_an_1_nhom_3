@@ -45,6 +45,12 @@ if (empty($room_id)) {
                 } else {
                     foreach ($rooms as $room) {
                         extract($room);
+                        if(isset($_SESSION['user'])){
+                            $booking_room = "index.php?act=booking&&room_id=" . $room_id . "&&checkin=" . $checkIn . "&&checkout=" . $checkOut;
+                        }else{
+                            $booking_room = "index.php?act=dangnhap&&chuadangnhap=1";
+                        }
+                       
                         $hinh = $hinhpath . $img;
                         $link_room = "index.php?act=roomct&&room_id=" . $room_id . "&&checkin=" . $checkIn . "&&checkout=" . $checkOut;
                         echo '
@@ -57,7 +63,7 @@ if (empty($room_id)) {
                            <i class="fa-solid fa-house"></i><span>35m<sup>2</sup></span><br>
                            <p id="note">Hotale Suites has been honored with the prestigious Five-Star Award by Forbes.</p>
                            <i class="fa-solid fa-hand-holding-dollar"></i><span id="span_price">' . $room_price . ' VNĐ</span>
-                           <div class="roomId_btn"><button type="submit">Book Now</button></div>
+                           <div class="roomId_btn"><a href="' . $booking_room . '"><button type="submit">Book Now</button></a></div>
                          </div>
                        </div>
                         ';
