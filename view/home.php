@@ -1,3 +1,6 @@
+<?php
+
+?>
 <div id="home" class="title">
                 <p>Book Your Vacation</p>
                 <form action="index.php?act=search" method="POST">
@@ -45,7 +48,7 @@
                             </a>
                             <i id="person" class="fa-solid fa-person"></i><span> 2 Người lớn</span>
                             <i id="bed" class="fa-solid fa-bed"></i><span> 1 Giường đôi</span>
-                            <div class="roomId_btn"><button type="submit">View <i class="fa-solid fa-angle-right"
+                            <div class="roomType_Id_btn"><button type="submit">View <i class="fa-solid fa-angle-right"
                                         style="font-size: 20px;"></i></button></div>
                         </div>
                     </div>
@@ -58,7 +61,7 @@
                             </a>
                             <i id="person" class="fa-solid fa-person"></i><span> 2 Người lớn</span>
                             <i id="bed" class="fa-solid fa-bed"></i><span> 1 Giường đôi</span>
-                            <div class="roomId_btn"><button type="submit">View <i class="fa-solid fa-angle-right"
+                            <div class="roomType_Id_btn"><button type="submit">View <i class="fa-solid fa-angle-right"
                                         style="font-size: 20px;"></i></button></div>
                         </div>
                     </div>
@@ -71,7 +74,7 @@
                             </a>
                             <i id="person" class="fa-solid fa-person"></i><span> 2 Người lớn</span>
                             <i id="bed" class="fa-solid fa-bed"></i><span> 1 Giường đôi</span>
-                            <div class="roomId_btn"><button type="submit">View <i class="fa-solid fa-angle-right"
+                            <div class="roomType_Id_btn"><button type="submit">View <i class="fa-solid fa-angle-right"
                                         style="font-size: 20px;"></i></button></div>
                         </div>
                     </div>
