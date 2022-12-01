@@ -12,7 +12,7 @@
                     <li><a href="index.php?act=room">Room</a></li>
                     <li><a href="">Service</a></li>
                 </ul>
-                <img id="footer-cards" src="./img/footer-cards.png" alt="">
+                <img id="footer-cards" src="./model/content/img/footer-cards.png" alt="">
             </div>
 
         </div>

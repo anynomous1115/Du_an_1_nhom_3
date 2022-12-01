@@ -76,11 +76,12 @@
     padding-left: 40px;
     font-size: 15px;
     color: #656565;
+
 }
 
 .checkIn .input,
 .checkOut .input {
-    padding-left: 20px;
+    padding-left: 15px;
 }
 
 .saerch_btn .btn {
@@ -107,9 +108,12 @@
     display: flex;
     width: 100%;
 }
-
+.roomId .imgRoom{
+    width: 317px;
+}
 .roomId img {
-    width: 90%;
+    max-width: 100%;
+    height: 100%;
     border-radius: 15px;
     transition: transform .5s, filter 1.5s ease-in-out;
     /* filter: grayscale(100%); */
@@ -121,13 +125,13 @@ img:hover {
 }
 
 .infor {
-    padding-left: 0px;
+    /* margin-left: 50px; */
 }
 .roomId{
     padding-top: 20px;
 }
 .roomId .infor #name {
-    color: #065FBF;
+    color: #111;
     padding-top: 15px;
     text-align: center;
     font-size: 30px;

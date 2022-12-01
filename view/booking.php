@@ -108,7 +108,7 @@ $sodem = floor($datediff / (60 * 60 * 24));
             </div>
 
             <div class="books_content_right_text">
-                <input type="checkbox">Tôi đã đọc và chấp nhận các chính sách của khách sạn, điều khoản & điều kiện, và chính sách quyền riêng tư
+                <input type="checkbox" require>Tôi đã đọc và chấp nhận các chính sách của khách sạn, điều khoản & điều kiện, và chính sách quyền riêng tư
                 <div class="cart_content_right_button">
                     <button type="submit">Đặt phòng</button>
                 </div>

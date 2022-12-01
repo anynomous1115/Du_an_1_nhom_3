@@ -78,8 +78,9 @@ html {
     font-size: 16px;
     text-decoration: none;
 }
-
-
+.login #logOut,
+.login #logIn_admin{
+}
 .title {
     background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 100)), url(https://a6e8z9v6.stackpathcdn.com/hotale/resort/wp-content/uploads/sites/2/2021/11/home-resort-hero-bg.jpg?fbclid=IwAR3iXwGTc78THodTfuHE_Gz12eHtPIVBA_DWtrOjdoBYYYZT4tgzI-AKOug);
     width: 100%;
@@ -117,11 +118,11 @@ html {
 }
 .saerch_btn input{
     border-color: #FFFFFF;
-    font-size: 24px;
+    font-size: 20px;
     width: 230px;
     height: 70px;
-    background-color: #00487A;
-    color: #fff;
+    background-color: #fff;
+    color: #6b6767;
     margin-left: 30px;
     border-radius: 5px;
 }
@@ -172,9 +173,15 @@ html {
 
 .text>p:last-child {
     width: 100%;
-    font-size: 30px;
-    padding-top: 100px;
-    line-height: 50px;
+
+    padding-top: 90px;
+    
+    font-size: 34px;
+    line-height: 1.4;
+    font-weight: 400;
+    letter-spacing: 5px;
+    text-transform: none;
+    color: #0a0a0a;
 
 }
 
@@ -242,14 +249,24 @@ font-size: 24px;
 }
 .roomId_btn button{
     font-size: 20px;
-    border: none;
-    color: #065FBF;
-    padding-bottom: 5px;
+    border-radius: 10px;
+    color: #111;
     background-color: #fff;
-    border: 1px solid #065FBF;
     transition: transform .5s, filter 1.5s ease-in-out;
 }
 .roomId_btn button:hover{
+    filter: grayscale(0);
+    transform: scale(1.02);
+}
+.roomType_Id button{
+    font-size: 20px;
+    border: none;
+    color: #6b6767;
+    padding-bottom: 10px;
+    background-color: #fff;
+    transition: transform .5s, filter 1.5s ease-in-out;
+}
+.roomType_Id button:hover{
     filter: grayscale(0);
     transform: scale(1.02);
 }
@@ -287,7 +304,6 @@ font-size: 24px;
     text-align: center;
 }
 .service-1_asnh i{
-    color: #065FBF;
     font-size: 95px;
 }
 .service-2{
@@ -307,7 +323,6 @@ font-size: 24px;
     text-align: center;
 }
 .service-2_asnh i{
-    color: #065FBF;
     font-size: 95px;
 }
 /* product */
@@ -676,7 +691,7 @@ h2{
     font-size: 15px;
     color: #333;
     font-family: var(--main-text-font);
-    padding-left: 100px;
+    padding-left: 60px;
     padding-right: 70px;
 }
 .book_conntent_right_details_center{
@@ -755,11 +770,55 @@ h2{
 .books_content_right_dangnhap p {
     font-size: 18px;
 }
+/* Payment */
+.payment{
+padding: 100px 50px;
+}
+.pay_content_left{
+    width: 60%;
+}
+.pay_content_right{
+    width: 40%;
+    border-left: 2px solid #dddd;
+    padding-left: 12px;
+}
+.pay_content_left_method_payment p:first-child{
+    font-weight: bold;
+}
+.pay_content_left p,label{
+    font-size: 20px;
+    font-family: var(--main-text-font);
+}
+.pay_content_right_button{
+    display: flex;
+    padding: 12px 0;
+    border-bottom: 2px dashed #dddd;
+}
+.pay_content_right_button input{
+    height: 30px;
+    width: 220px;
+    margin-right: 80px;
+    padding-left: 12px;
+}
+.pay_content_right_button button{
+    height: 30px;
+    width: 100px;
+    background-color: #111;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+.pay_content_left_method_payment_items_imgi{
+    width: 20%
+}
+.pay_content_left_method_payment_items_imgi img{
+   width: 100%;
+}
 
 /* footer */
 .footer{
-    margin-top: 10px;
-    background-color: #065FBF;
+    margin-top: 60px;
+    background-color: #111;
     width: 100%;
     height: 250px;
     border-radius: 35px;
@@ -782,6 +841,6 @@ h2{
 
 }
 #footer-cards{
-    margin-left: 320px;
+    margin-left: 250px;
     margin-top: 50px;
 }
