@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  height: 100vh;
+}
+
+aside {
+  width: 20%;
+  background: #1b2a47;
+  margin-right: 10px;
+  height: 1050px;
+}
+
+article {
+  width: 80%;
+}
+
+header {
+  height: 90px;
+  border-bottom: 1px solid #005b9f;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  padding: 20px;
+}
+
+.banner {
+  background-image: url(../img/banner.png);
+  background-size: cover;
+  width: 90%;
+  height: 240px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.element {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  background: #1b2a47;
+  width: 100%;
+  cursor: pointer;
+  color: #fff;
+  font-size: 16px;
+  transition: all 1s ease-out;
+}
+.element:hover{
+  background-color: #333;
+}
+.products {
+  margin-top: 40px;
+  width: 100%;
+}
+
+.products-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+table {
+  margin-top: 16px;
+  width: 100%;
+  border-collapse: collapse;
+}
+input{
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #999;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+button{
+  display: inline-block;
+  background: #ff523b;
+  color: #fff;
+  padding: 8px 20px;
+  margin: 30px 0;
+  border-radius: 30px;
+  transition: background 0.5s;
+  cursor: pointer;
+  border: none;
+}
+button:hover{
+background: #563434;
+}
+table th{
+  padding: 10px 20px;
+  border: 1px solid #999;
+  background-color: #c8e6c9;
+}
+table{
+  text-align: center;
+}
+h1{
+  margin-top: 10px;
+  margin-left: 10px;
+}
+input[type=text]{
+  width: 100%;
+}
+.danhmuc{
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #999;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.btn-sua{
+  background-color: #00c853;
+  color: #f9fbe7;
+}
+.btn-xoa{
+  background-color: #e53935;
+  color: #f9fbe7;
+}

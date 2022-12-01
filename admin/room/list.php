@@ -3,7 +3,7 @@
 </div>
 <form action="index.php?act=list_room" method="POST">
     <input type="text" style="width:200px" name="keyw">
-    <select name="type_id">
+    <select name="type_id" class="danhmuc">
         <option value="0" selected>Tất cả</option>
         <?php foreach ($list_type_room as $danhmuc) {
             extract($danhmuc);
@@ -18,8 +18,8 @@
         <th>Mã phòng</th>
         <th>Tên phòng</th>
         <th>Số người</th>
-        <th>Hình</th>
-        <th>Mô tả</th>
+        <th width="150px">Hình</th>
+        <th >Mô tả</th>
         <th>Giá phòng</th>
         <th></th>
     </tr>
@@ -29,7 +29,7 @@
         $xoa_room= "index.php?act=xoa_room&room_id=" . $room_id;
         $hinhpath = "../model/content/img/" . $img;
         if (is_file($hinhpath)) {
-            $img = "<img src='" . $hinhpath . "' width='25%'>";
+            $img = "<img src='" . $hinhpath . "' width='50%'>";
         } else {
             $img = "";
         }
@@ -41,8 +41,8 @@
                 <td>' . $img . '</td>
                 <td>' . $description . '</td>
                 <td>' . $room_price . ' VNĐ</td>
-                <td><a href="' . $sua_room . '"><input type="button" value="Sửa"></a>
-                <a href="' . $xoa_room . '"> <input type="button" value="Xóa"></a>
+                <td><a href="' . $sua_room . '"><input type="button" value="Sửa" class="btn-sua"></a>
+                <a href="' . $xoa_room . '"> <input type="button" value="Xóa" class="btn-xoa"></a>
                 </td>
             </tr>';
     }

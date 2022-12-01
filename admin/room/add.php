@@ -34,7 +34,7 @@
             <p id="loixem"class="loi"></p>
             Mã loại
             <br>
-            <select name="type_id">
+            <select name="type_id" class="danhmuc">
                 <?php foreach ($list_type_room as $danhmuc) {
                     extract($danhmuc);
                     echo ' <option value="'.$type_id.'">'.$type_name.'</option>';

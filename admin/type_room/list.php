@@ -16,8 +16,8 @@
                 <td><input type="checkbox"></td>
                 <td>' . $type_id . '</td>
                 <td>' . $type_name . '</td>
-                <td><a href="' . $suadm . '"><input type="button" value="Sửa"></a>
-                <a href="' . $xoadm . '"> <input type="button" value="Xóa"></a>
+                <td><a href="' . $suadm . '"><input type="button" value="Sửa" class="btn-sua"></a>
+                <a href="' . $xoadm . '"> <input type="button" value="Xóa"  class="btn-xoa"></a>
                 </td>
             </tr>';
     }
