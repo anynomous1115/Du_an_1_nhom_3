@@ -32,10 +32,16 @@
                 <a href="index.php?act=qlyphong" class="element">
                     <div>Quản lý đặt phòng</div>
                 </a>
-                <a href="" class="element">
-                <div>Quản lý user</div>
-                </a>
-                <a href="" class="element">
+                <?php
+                if(isset($_SESSION['user'])){
+                    if($_SESSION['user']['role']==0){
+                        echo '<a href="index.php?act=qlynv" class="element">
+                        <div>Quản lý nhân viên</div>
+                        </a>';
+                    }
+                }
+                ?>
+                <a href="index.php?act=qlykh" class="element">
                  <div>Quản lý khách hàng</div>
                  </a>
                  <a href="index.php?act=thongke" class="element">
