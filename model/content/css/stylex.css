@@ -172,9 +172,15 @@ html {
 
 .text>p:last-child {
     width: 100%;
-    font-size: 30px;
-    padding-top: 100px;
-    line-height: 50px;
+
+    padding-top: 90px;
+    
+    font-size: 34px;
+    line-height: 1.4;
+    font-weight: 400;
+    letter-spacing: 5px;
+    text-transform: none;
+    color: #0a0a0a;
 
 }
 
@@ -676,7 +682,7 @@ h2{
     font-size: 15px;
     color: #333;
     font-family: var(--main-text-font);
-    padding-left: 100px;
+    padding-left: 60px;
     padding-right: 70px;
 }
 .book_conntent_right_details_center{
@@ -754,6 +760,50 @@ h2{
 }
 .books_content_right_dangnhap p {
     font-size: 18px;
+}
+/* Payment */
+.payment{
+padding: 100px 50px;
+}
+.pay_content_left{
+    width: 60%;
+}
+.pay_content_right{
+    width: 40%;
+    border-left: 2px solid #dddd;
+    padding-left: 12px;
+}
+.pay_content_left_method_payment p:first-child{
+    font-weight: bold;
+}
+.pay_content_left p,label{
+    font-size: 20px;
+    font-family: var(--main-text-font);
+}
+.pay_content_right_button{
+    display: flex;
+    padding: 12px 0;
+    border-bottom: 2px dashed #dddd;
+}
+.pay_content_right_button input{
+    height: 30px;
+    width: 220px;
+    margin-right: 80px;
+    padding-left: 12px;
+}
+.pay_content_right_button button{
+    height: 30px;
+    width: 100px;
+    background-color: #111;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+.pay_content_left_method_payment_items_imgi{
+    width: 20%
+}
+.pay_content_left_method_payment_items_imgi img{
+   width: 100%;
 }
 
 /* footer */
