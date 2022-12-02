@@ -22,7 +22,9 @@ a {
 
 aside {
   width: 20%;
-  background: #4a4a4a;
+  background: #1b2a47;
+  margin-right: 10px;
+  height: 1050px;
 }
 
 article {
@@ -31,7 +33,7 @@ article {
 
 header {
   height: 90px;
-  border-bottom: 1px solid #999;
+  border-bottom: 1px solid #005b9f;
   text-align: center;
   display: flex;
   justify-content: center;
@@ -44,7 +46,8 @@ main {
 
 .banner {
   background-image: url(../img/banner.png);
-  width: 100%;
+  background-size: cover;
+  width: 90%;
   height: 240px;
   display: flex;
   justify-content: center;
@@ -64,13 +67,18 @@ main {
 }
 
 .element {
-  padding: 8px;
-  background: white;
-  border-radius: 5px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  background: #1b2a47;
   width: 100%;
   cursor: pointer;
+  color: #fff;
+  font-size: 16px;
+  transition: all 1s ease-out;
 }
-
+.element:hover{
+  background-color: #333;
+}
 .products {
   margin-top: 40px;
   width: 100%;
@@ -123,4 +131,20 @@ h1{
 }
 input[type=text]{
   width: 100%;
-}  
+}
+.danhmuc{
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #999;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.btn-sua{
+  background-color: #00c853;
+  color: #f9fbe7;
+}
+.btn-xoa{
+  background-color: #e53935;
+  color: #f9fbe7;
+}

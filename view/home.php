@@ -1,3 +1,6 @@
+<?php
+
+?>
 <div id="home" class="title">
                 <p>Book Your Vacation</p>
                 <form action="index.php?act=search" method="POST">
@@ -23,7 +26,7 @@
         <div class="content">
             <div id="about" class="aboutUs">
                 <div class="text">
-                    <p><span>5<i class="fa-regular fa-star"></i></span> <span>25</span> Phòng</p>
+                    <p><span>5<i class="fa-regular fa-star"></i></span> <span>25</span> <span style="font-size: 22px; font-weight: 400; margin-right: 12px; letter-spacing: 7px;">rooms</span></p>
                     <p>Tọa lạc ở khu vực Trịnh Văn Bô, cách sân vận động Quốc gia Mỹ Đình, khách sạn IQ với 25 phòng
                         nghỉ 5 sao và hệ thống phòng họp hiện đại luôn sẵn sàng phục vụ quý khách với đội ngũ nhân viên
                         nhiệt tình và giàu kinh nghiệm. </p>
@@ -45,7 +48,7 @@
                             </a>
                             <i id="person" class="fa-solid fa-person"></i><span> 2 Người lớn</span>
                             <i id="bed" class="fa-solid fa-bed"></i><span> 1 Giường đôi</span>
-                            <div class="roomId_btn"><button type="submit">View <i class="fa-solid fa-angle-right"
+                            <div class="roomType_Id_btn"><button type="submit">View <i class="fa-solid fa-angle-right"
                                         style="font-size: 20px;"></i></button></div>
                         </div>
                     </div>
@@ -58,7 +61,7 @@
                             </a>
                             <i id="person" class="fa-solid fa-person"></i><span> 2 Người lớn</span>
                             <i id="bed" class="fa-solid fa-bed"></i><span> 1 Giường đôi</span>
-                            <div class="roomId_btn"><button type="submit">View <i class="fa-solid fa-angle-right"
+                            <div class="roomType_Id_btn"><button type="submit">View <i class="fa-solid fa-angle-right"
                                         style="font-size: 20px;"></i></button></div>
                         </div>
                     </div>
@@ -71,7 +74,7 @@
                             </a>
                             <i id="person" class="fa-solid fa-person"></i><span> 2 Người lớn</span>
                             <i id="bed" class="fa-solid fa-bed"></i><span> 1 Giường đôi</span>
-                            <div class="roomId_btn"><button type="submit">View <i class="fa-solid fa-angle-right"
+                            <div class="roomType_Id_btn"><button type="submit">View <i class="fa-solid fa-angle-right"
                                         style="font-size: 20px;"></i></button></div>
                         </div>
                     </div>
