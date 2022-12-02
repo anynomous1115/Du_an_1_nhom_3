@@ -29,3 +29,12 @@ function room_relate_getinfo($room_id,$type_id){
     $sql = "select * from rooms where type_id=".$type_id." AND room_id <> ".$room_id;
     return pdo_query($sql);
 }
+function room_relate_getinfos($type_id, $room_id){
+    $sql = "select * from rooms where type_id=".$type_id." and room_id !=".$room_id."";
+    return pdo_query($sql);
+}
+function room_service($type_id){
+    $sql = "SELECT service_name FROM service WHERE service_id IN (SELECT service_id FROM room_detail WHERE type_id = ?)";
+    return pdo_query($sql, $type_id);
+
+}

@@ -35,6 +35,9 @@
                 <a href="" class="element">
                 <div>Quản lý user</div>
                 </a>
+                <a href="" class="element">
+                 <div>Quản lý khách hàng</div>
+                 </a>
                  <a href="index.php?act=thongke" class="element">
                  <div>Thống kê</div>
                  </a>

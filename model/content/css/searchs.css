@@ -108,12 +108,9 @@
     display: flex;
     width: 100%;
 }
-.roomId .imgRoom{
-    width: 317px;
-}
+
 .roomId img {
-    max-width: 100%;
-    height: 100%;
+    width: 90%;
     border-radius: 15px;
     transition: transform .5s, filter 1.5s ease-in-out;
     /* filter: grayscale(100%); */

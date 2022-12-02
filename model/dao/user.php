@@ -24,7 +24,7 @@ function user_delete($user_id){
 }
 
 function user_select_all(){
-    $sql = "SELECT * FROM users";
+    $sql = "SELECT * FROM users where role = 2";
     return pdo_query($sql);
 }
 
