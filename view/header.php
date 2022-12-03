@@ -35,10 +35,10 @@
                 <div class="login">
                     <?php 
                     if (isset($_SESSION['user'])) {
-                        echo "<p>Xin chào " . $_SESSION['user']['full_name'] ."</p>";
-                        echo '<a id="logOut" href= "index.php?act=dangxuat">Đăng xuất</a><br>';
+                        echo "<p>Helllo " . $_SESSION['user']['full_name'] ."</p>";
+                        echo '<a id="logOut" href= "index.php?act=dangxuat">Logout</a><br>';
                         if ($_SESSION['user']['role'] == 0) {
-                            echo '<a id="logIn_admin" href="admin/index.php">Đăng nhập admin</a>';
+                            echo '<a id="logIn_admin" href="admin/index.php">Login admin</a>';
                         }
                     } else {
                     ?>
