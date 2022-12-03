@@ -1,5 +1,5 @@
  <main>
             <div class="banner">
-            Welcome to Dashboard
+           <h1>WELCOME TO DASHBOARD</h1> 
             </div>
         </main>
