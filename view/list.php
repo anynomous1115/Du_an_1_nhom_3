@@ -34,7 +34,7 @@
 </div>
 <div class="artical">
     <div class="box-title">Lịch sử đặt phòng</div>
-    <table class="cart" border="1">
+    <table class="cart">
         <tr>
             <th>Tên phòng</th>
             <th>Hình ảnh phòng</th>
