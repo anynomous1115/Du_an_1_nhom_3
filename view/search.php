@@ -16,7 +16,7 @@ if (empty($room_id)) {
     $rooms = pdo_query($sql);
 }
 ?>
-<link rel="stylesheet" href="model/content/css/search.css">
+<link rel="stylesheet" href="model/content/css/searchs.css">
 <div class="title">
     <p>Room Search</p>
 </div>
@@ -27,33 +27,33 @@ if (empty($room_id)) {
         <form action="index.php?act=search" method="POST">
             <div class="checkIn">
                 <div class="label"><label for="inputEmail4">Ngày Bắt Đầu</label><br></div>
-                <div class="input"><input type="date" value="<?= $checkIn ?>" name="checkIn" class="form-control" required></div>
+                <div class="input"><input type="date" value="<?= $checkIn ?>" id="startdateId" class="form-control" required></div>
             </div>
             <div class="checkOut">
                 <div class="label"><label for="inputEmail4">Ngày Kết Thúc</label><br></div>
-                <div class="input"><input type="date" value="<?= $checkOut ?>" name="checkOut" class="form-control" required></div>
+                <div class="input"><input type="date" value="<?= $checkOut ?>" id="enddateId" class="form-control" required></div>
             </div>
             <div class="saerch_btn">
                 <div class="btn"><input type="submit" value="Book Now"></div>
             </div>
         </form>
     </div>
-    <div class="rooms"> 
+    <div class="rooms">
         <?php
-                if (empty($rooms)) {
-                    echo "Xin lỗi quý khách ngày mà quý khách tìm kiếm không còn phòng trống quý khách vui lòng sang ngày khác";
+        if (empty($rooms)) {
+            echo "Xin lỗi quý khách ngày mà quý khách tìm kiếm không còn phòng trống quý khách vui lòng sang ngày khác";
+        } else {
+            foreach ($rooms as $room) {
+                extract($room);
+                if (isset($_SESSION['user'])) {
+                    $booking_room = "index.php?act=booking&&room_id=" . $room_id . "&&checkin=" . $checkIn . "&&checkout=" . $checkOut;
                 } else {
-                    foreach ($rooms as $room) {
-                        extract($room);
-                        if(isset($_SESSION['user'])){
-                            $booking_room = "index.php?act=booking&&room_id=" . $room_id . "&&checkin=" . $checkIn . "&&checkout=" . $checkOut;
-                        }else{
-                            $booking_room = "index.php?act=dangnhap&&chuadangnhap=1";
-                        }
-                       
-                        $hinh = $hinhpath . $img;
-                        $link_room = "index.php?act=roomct&&room_id=" . $room_id . "&&checkin=" . $checkIn . "&&checkout=" . $checkOut;
-                        echo '
+                    $booking_room = "index.php?act=dangnhap&&chuadangnhap=1";
+                }
+
+                $hinh = $hinhpath . $img;
+                $link_room = "index.php?act=roomct&&room_id=" . $room_id . "&&checkin=" . $checkIn . "&&checkout=" . $checkOut;
+                echo '
                         <div class="roomId">
                          <div class="imgRoom"><a href="' . $link_room . '"><img src="' . $hinh . '" alt=""></a></div>
                          <div class="infor">
@@ -62,13 +62,25 @@ if (empty($room_id)) {
                            <i class="fa-solid fa-bed"></i><span> 1 Giường đôi</span>
                            <i class="fa-solid fa-house"></i><span>35m<sup>2</sup></span><br>
                            <p id="note">Hotale Suites has been honored with the prestigious Five-Star Award by Forbes.</p>
-                           <i class="fa-solid fa-hand-holding-dollar"></i><span id="span_price">' . $room_price . ' VNĐ</span>
-                           <div class="roomId_btn"><a href="' . $booking_room . '"><button type="submit">Book Now</button></a></div>
+                           <i class="fa-solid fa-hand-holding-dollar"></i><span id="span_price">' . $room_price . ' VNĐ</span>';
+                if (isset($_SESSION['user'])) {
+                    if (!$_SESSION['user']['role'] == 0) {
+                        echo ' <div class="roomId_btn"><a href="' . $booking_room . '"><button type="submit">Book Now</button></a></div>
                          </div>
                        </div>
                         ';
+                    }else{
+                        echo '</div>
+                        </div>';
                     }
+                } else {
+                    echo ' <div class="roomId_btn"><a href="' . $booking_room . '"><button type="submit">Book Now</button></a></div>
+                         </div>
+                       </div>
+                        ';
                 }
-                ?>
+            }
+        }
+        ?>
     </div>
 </div>

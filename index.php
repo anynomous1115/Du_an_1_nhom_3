@@ -67,7 +67,7 @@ if(isset($_GET['act'])){
             } 
             $list_type = type_selectall();
             extract($one_room);
-            $room_relate = room_relate_getinfo($room_id,$type_id);
+            
                 include "view/roomct.php";
             break;
         case 'booking':
