@@ -82,19 +82,20 @@
 .checkIn .input,
 .checkOut .input {
     padding-left: 15px;
+
 }
 
 .saerch_btn .btn {
     margin-top: 50px;
+
 }
 
 .saerch_btn input {
-    width: 200px;
+    width: 230px;
     height: 40px;
     border-radius: 5px;
-    border-style: none;
-    padding-top: 10px;
-    color: #FFFFFF;
+
+    border: #656565 solid 1px;
 }
 
 /* room */

@@ -33,6 +33,7 @@ html {
     top: 0px;
     left: 0;
     width: 100%;
+    z-index: 1;
 }
 
 .logo img {
@@ -190,7 +191,7 @@ html {
     border-radius: 20px;
 }
 #imgGroup{
-    z-index: 1;
+    z-index: -1;
     margin-top: -100px;
     width: 100%;
     transition: transform .5s, filter 1.5s ease-in-out;
