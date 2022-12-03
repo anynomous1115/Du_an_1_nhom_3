@@ -91,7 +91,11 @@ if(isset($_GET['act'])){
         case 'thanhcong':
             echo '<script>alert("Đặt phòng thành công")</script>';
             include 'view/home.php';
-            break;    
+            break;
+        case 'lichsu':
+            $list = booking($_SESSION['user']['user_id']);
+            include 'view/list.php';
+            break;        
         default:
         include "view/home.php";
         include "view/footer.php";

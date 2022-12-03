@@ -108,7 +108,9 @@
     display: flex;
     width: 100%;
 }
-
+.imgRoom{
+    width: 70%;
+}
 .roomId img {
     width: 90%;
     border-radius: 15px;

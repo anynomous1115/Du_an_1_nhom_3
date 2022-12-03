@@ -52,3 +52,7 @@ function rooms_statistic(){
     $sql = "select booking_detail_id, start_date, end_date, into_money, ro.room_name, us.full_name from rooms ro join booking_detail bkd on bkd.room_id = ro.room_id join booking bk on bkd.booking_id = bk.booking_id join users us on us.user_id = bk.user_id";
     return pdo_query($sql);
 }
+function booking($user_id){
+    $sql = "select ro.room_name,bk.booking_date, ro.img, start_date, end_date, into_money from  rooms ro join booking_detail bd on bd.room_id = ro.room_id join booking bk on bd.booking_id = bk.booking_id WHERE bk.user_id = ?";
+    return pdo_query($sql, $user_id);
+}

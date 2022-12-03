@@ -36,6 +36,7 @@
                     <?php 
                     if (isset($_SESSION['user'])) {
                         echo "<p>Xin chào " . $_SESSION['user']['full_name'] ."</p>";
+                        echo '<a href= "index.php?act=lichsu">Lịch sử đặt phòng</a><br>';
                         echo '<a id="logOut" href= "index.php?act=dangxuat">Đăng xuất</a><br>';
                         if ($_SESSION['user']['role'] == 0) {
                             echo '<a id="logIn_admin" href="admin/index.php">Đăng nhập admin</a>';
