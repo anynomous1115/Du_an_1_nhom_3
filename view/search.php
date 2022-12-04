@@ -16,7 +16,7 @@ if (empty($room_id)) {
     $rooms = pdo_query($sql);
 }
 ?>
-<link rel="stylesheet" href="model/content/css/searchs.css">
+<link rel="stylesheet" href="model/content/css/search.css">
 <div class="title">
     <p>Room Search</p>
 </div>
@@ -58,7 +58,7 @@ if (empty($room_id)) {
                          <div class="imgRoom"><a href="' . $link_room . '"><img src="' . $hinh . '" alt=""></a></div>
                          <div class="infor">
                            <a href="' . $link_room . '"><p id="name">' . $room_name . '</p></a>
-                           <i class="fa-solid fa-person"></i><span> 2 Người lớn</span>
+                           <i class="fa-solid fa-person"></i><span> '.$room_people.' Người lớn</span>
                            <i class="fa-solid fa-bed"></i><span> 1 Giường đôi</span>
                            <i class="fa-solid fa-house"></i><span>35m<sup>2</sup></span><br>
                            <p id="note">Hotale Suites has been honored with the prestigious Five-Star Award by Forbes.</p>

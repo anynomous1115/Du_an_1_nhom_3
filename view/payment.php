@@ -37,6 +37,9 @@
                             <input name="method_payment" type="radio">
                             <label for="">Thanh toán qua mã QR</label>
                         </div>
+                        <div class="pay_content_left_method_payment_items_imgi">
+                            <img src="../model/content/img/qr.jpg" alt="">
+                        </div>
                         <div class="pay_content_left_method_payment_items">
                             <input name="method_payment" type="radio">
                             <label for="">Thanh toán qua Momo</label>
