@@ -26,4 +26,8 @@ function loai_getinfo($type_id){
     $sql = "select * from type_room where type_id=?";
     return pdo_query_one($sql,$type_id);
 }
+function name_type($type_id){
+    $sql = "select type_name from type_room where type_id = ?" ;
+    return pdo_query_one($sql,$type_id);
+}
 

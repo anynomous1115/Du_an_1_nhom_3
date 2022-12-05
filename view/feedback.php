@@ -5,59 +5,88 @@ include "../model/dao/feedback.php";
 $room_id = $_REQUEST['room_id'];
 $feedback = feedback_select_by_room($room_id);
 ?>
+<style>
+    #front {
+        display: block;
+        height: 1px;
+        border: 0;
+        border-top: 1px solid #86B817;
+        margin: 0px 0px 32px 0;
+        padding: 0;
+    }
+    .box-title{
+        color: #4790CE;
+        font-size: 24px;
+    }
+
+    hr {
+        border-top: 1px solid #DDDDDD;
+    }
+
+    .danhgia {
+        display: grid;
+        grid-template-columns: 500px 700px;
+        grid-template-rows: 28px;
+        padding: 24px 0 30px 0;
+    }
+
+    label {
+        font-weight: bolder;
+    }
+
+    #nd {
+        font-size: 20px;
+        color: #86B817;
+    }
+    #text{
+        margin-top: 48px;
+        width: 600px;
+        height: 150px;
+        margin-bottom: 32px;
+    }
+    #nut{
+        width: 100px;
+        height: 40px;
+        border-radius: 5px;
+        color: #FFFFFF;
+        background-color: #86B817;
+        border: 1px solid #86B817;
+        font-size: 15px;
+        font-weight: bold;
+    }
+</style>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 <div class="box">
     <div class="box-title">
-        BÌNH LUẬN
+        ĐÁNH GIÁ CỦA KHÁCH HÀNG VỀ KHÁCH SẠN
+        <hr id="front">
     </div>
     <div class="box-content">
-        <h3>Nội dung bình luận ở đây</h3>
-        <table>
-            <?php
-            foreach ($feedback as $dsbl) {
-                extract($dsbl);
-                echo '<tr class="bl"><td id="nd"><li>' . $content . '</li></td>';
-                echo '<td><i>' . $full_name . ',</i></td>';
-                echo '<td>' . $feedback_date . '</td></tr>';
-            }
-            ?>
-        </table>
+        <?php
+        foreach ($feedback as $dsbl) {
+            extract($dsbl);
+            echo '<div class = "danhgia">';
+            echo '<label>' . $full_name . '</label>';
+            echo '<p id="nd">' . $content . '</p>';
+            echo '<i>' . $feedback_date . '</i>';
+            echo '</div>';
+            echo '<hr>';
+        }
+        ?>
         <?php
         if (isset($_SESSION['user']['user_id'])) {
-             $user_id = $_SESSION['user']['user_id'] ;
-            ?>
-        <div class="binhluanform">
-        <form action="<?=$_SERVER['PHP_SELF']; ?>"method="post" >
-            <input type="hidden" name="user_id" value="<?php echo $user_id ?>">
-            <input type="hidden" name="room_id" value="<?php echo $room_id?>">
-            <input type="text" name="content" >
-            <?php
-            /*for ($i = 1; $i <4 ; $i++){
-                echo '<i class="fa-solid fa-star" id="start'.$i.'"></i>';
-                echo '<script>
-                    $(document).ready(function(){
-                $("#start'.$i.'").click(function(){
-                $("#start'.$i.'").css({"color": "rgb(255, 213, 0)"})
-                   });
-                    });
-                     </script>';
-            }
-            $y = 3;
-            for ($i = 1; $i <6-$y ; $i++){
-                echo '<i class="fa-regular fa-star" id="start'.$i.'"></i>';
-            }*/
-            ?>
-            <input type="submit" name="guibinhluan" value="Gửi phản hồi ">
-        </form>
-        </div>
+            $user_id = $_SESSION['user']['user_id'];
+        ?>
+            <div class="binhluanform">
+                <form action="<?= $_SERVER['PHP_SELF']; ?>" method="post">
+                    <input type="hidden" name="user_id" value="<?php echo $user_id ?>">
+                    <input type="hidden" name="room_id" value="<?php echo $room_id ?>">
+                    <textarea name="content" id="text" ></textarea><br>
+                    <input type="submit" name="guibinhluan" value="Gửi phản hồi " id="nut">
+                </form>
+            </div>
 
         <?php }
-        elseif (isset($_SESSION['user']['ma_nv'])){
-            echo '<div id="kbl">Bạn không được bình luận</div>';
-        }
-        else {
-            echo '<div id="kbl">Bạn phải đăng nhập để bình luận</div>';
-        }
         ?>
 
         <?php
@@ -66,11 +95,10 @@ $feedback = feedback_select_by_room($room_id);
             $ma_hh = $_POST['user_id'];
             $ngaybl = date('Y/m/d');
             $ma_kh = $_POST['room_id'];
-            feedback_insert($noidung,$ma_hh, $ma_kh,$ngaybl);
-            header("Location: ".$_SERVER['HTTP_REFERER']);
+            feedback_insert($noidung, $ma_hh, $ma_kh, $ngaybl);
+            header("Location: " . $_SERVER['HTTP_REFERER']);
         }
         ?>
     </div>
 
 </div>
-

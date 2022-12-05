@@ -2,8 +2,12 @@
 require_once 'pdo.php';
 
 function room_selectall(){
-    $sql = "select * from rooms";
+    $sql = "SELECT * , tp.max_people , tp.max_bed FROM rooms ro JOIN type_room tp on tp.type_id = ro.type_id";
     return pdo_query($sql);
+}
+function room_selectall_type($type_id){
+    $sql = "SELECT * , tp.max_people , tp.max_bed, tp.type_name FROM rooms ro JOIN type_room tp on tp.type_id = ro.type_id where tp.type_id = ?";
+    return pdo_query($sql, $type_id);
 }
 function room_select_by_id($room_id){
     $sql = "select * from rooms where room_id = ?";
@@ -22,7 +26,11 @@ function room_update($room_id, $room_name, $img, $description, $room_price, $typ
     pdo_execute($sql,$room_name, $img, $description, $room_price, $type_id, $room_id );
 }
 function room_getinfo($room_id){
-    $sql = "select * from rooms where room_id=?";
+    $sql = "select * , tp.max_people , tp.max_bed from rooms ro JOIN type_room tp on tp.type_id = ro.type_id where room_id=?";
+    return pdo_query_one($sql,$room_id);
+}
+function room_feedback($room_id){
+    $sql="select *, COUNT(fb.feedback_id)as danhgia from rooms ro join feedback fb on ro.room_id = fb.room_id WHERE ro.room_id = ?";
     return pdo_query_one($sql,$room_id);
 }
 function room_relate_getinfo($room_id,$type_id){

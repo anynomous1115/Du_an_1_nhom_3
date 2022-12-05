@@ -67,8 +67,7 @@ if(isset($_GET['act'])){
             } 
             $list_type = type_selectall();
             extract($one_room);
-            
-                include "view/roomct.php";
+            include "view/roomct.php";
             break;
         case 'booking':
             include "view/booking.php";
@@ -81,21 +80,40 @@ if(isset($_GET['act'])){
              $booking_date = date("Y-m-d");
              $start_date = $_POST['start_date'];
              $end_date = $_POST['end_date'];
-             $sql = "insert into booking(user_id, total, booking_date) values( '$user_id','$total_money','$booking_date')";
-             $booking_id = pdo_execute_get_id($sql);
-             booking_detail_insert($booking_id,$room_id, $start_date, $end_date, $total_money);
-             header('Location: index.php?act=thanhcong');
+             $one_room = room_feedback($_POST['room_id']);
+             extract($one_room);
+             include 'view/payment.php'; 
             }
-            echo $_POST['start_date'];
              break;
+        case 'thanhtoan':
+            if(isset($_POST['start_date'])){
+                $user_id = $_SESSION['user']['user_id'];
+                $total_money = $_POST['total_money'];
+                $room_id = $_POST['room_id'];
+                $booking_date = date("Y-m-d");
+                $start_date = $_POST['start_date'];
+                $end_date = $_POST['end_date'];
+            $sql = "insert into booking(user_id, total, booking_date) values( '$user_id','$total_money','$booking_date')";
+            $booking_id = pdo_execute_get_id($sql);
+            $status = 4;
+            booking_detail_insert($booking_id,$room_id, $start_date, $end_date, $total_money, $status);
+            header('Location: index.php?act=thanhcong');
+            }
         case 'thanhcong':
-            echo '<script>alert("Đặt phòng thành công")</script>';
+            echo '<script>alert("Đặt phòng thành công, bạn vui chờ chúng tôi xác nhận thanh toán")</script>';
             include 'view/home.php';
             break;
         case 'lichsu':
             $list = booking($_SESSION['user']['user_id']);
             include 'view/list.php';
-            break;        
+            break;
+        case 'loai':
+            $type_id = $_GET['type_id'];
+            $name_type = name_type($type_id);
+            extract($name_type);
+            $loadroom_type = room_selectall_type($type_id);
+            include 'view/type_room.php';
+            break;            
         default:
         include "view/home.php";
         include "view/footer.php";

@@ -12,11 +12,12 @@
             <th>NGÀY TRẢ</th>
             <th>TIỀN</th>
             <th>TRẠNG THÁI</th>
+            <th>THAO TÁC</th>
         </tr>
         <?php
         foreach ($thongke as $phong) {
             extract($phong);
-            $checkout = "index.php?act=deletebooking&booking_detail_id=" . $booking_detail_id;
+            $xoa_booking = "index.php?act=deletebooking&&booking_detail_id=" . $booking_detail_id;
             echo '
         <tr>
         <td>' . $booking_detail_id . '</td>
@@ -24,24 +25,23 @@
         <td>' . $room_name . '</td>
         <td>' . $start_date . '</td>
         <td>' . $end_date . '</td>
-        <td>' . $into_money . '</td>
-        <td><input id="checkin'.$booking_detail_id.'"type="button" value="Check In">
-                <a href="' . $checkout . '" id="checkout'.$booking_detail_id.'"><input type="button" value="Check Out"></a>
-        </td>
-        </tr>
-        <style>
-        #checkout'.$booking_detail_id.'{
-            display: none;
+        <td>' . $into_money . '</td>';
+        if($status == 0){
+        echo '<td> Đã thuê phòng
+        </td>';
+        }else if($status == 1){
+            echo '<td><a href="index.php?act=checkout&&booking_detail_id='.$booking_detail_id.'"><input type = "button" value = "Check Out" class="btn-xoa"></a></td>';
+        }else if($status == 2){
+            echo '<td><a href="index.php?act=checkin&&booking_detail_id='.$booking_detail_id.'"><input type = "button" value = "Check In" class="btn-sua"></a></td>';
+        }else if($status == 3){
+            echo '<td>Đơn đặt phòng bị hủy</td>';
+        }else if($status == 4){
+            echo '<td><a href="index.php?act=xacnhan&&booking_detail_id='.$booking_detail_id.'"><input type = "button" class="btn-sua" value = "Xác nhận"></a>
+            <a href="index.php?act=huy&&booking_detail_id='.$booking_detail_id.'"><input  type = "button" value = "Hủy" class="btn-xoa"></a></td>';
         }
-        </style>
-        <script>
-            $(document).ready(function(){
-               $("#checkin'.$booking_detail_id.'").click(function(){
-                $("#checkout'.$booking_detail_id.'").show();
-                $("#checkin'.$booking_detail_id.'").hide();
-               })
-            });
-        </script>
+        echo '<td>
+        <a href="' . $xoa_booking . '"> <input type="button" value="Xóa" class="btn-xoa"></a></td></tr>
+        
         '
         ;
         }

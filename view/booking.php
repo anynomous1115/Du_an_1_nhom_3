@@ -1,6 +1,7 @@
 <?php
 $room = room_select_by_id($_GET['room_id']);
 extract($room);
+$hinh = $hinhpath . $img;
 $checkin = $_GET['checkin'];
 $checkout = $_GET['checkout'];
 $first_date = strtotime($checkin);
@@ -17,26 +18,34 @@ $sodem = floor($datediff / (60 * 60 * 24));
                 </div>
                 <div class="book_conntent_left_wrap">
                     <div class="book_conntent_left_tt">
+                        <div class="book_content_grid">
                         <label for="">Ngày nhận phòng:</label>
                         <input type="date" name="start_date" value="<?= $checkin ?>">
-                        <br>
+                        </div>
+                        <div class="book_content_grid">
                         <label for="">Số đêm:</label>
                         <input type="text" name="dem" value="<?= $sodem ?>">
-                        <br>
+                        </div>
+                        <div class="book_content_grid">
                         <label for="">Ngày trả phòng:</label>
                         <input type="date" name="end_date" value="<?= $checkout ?>">
-                        <br>
+                        </div>
+                        <div class="book_content_grid">
                         <label for="">Họ tên:</label>
                         <input type="text" name="" value="<?= $_SESSION['user']['full_name'] ?>">
-                        <br>
+                        </div>
+                        <div class="book_content_grid">
                         <label for="">SĐT:</label>
                         <input type="text" name="" value="<?= $_SESSION['user']['phone_number'] ?>">
-                        <br>
+                        </div>
+                        <div class="book_content_grid">
                         <label for="">Email:</label>
                         <input type="text" name="" value="<?= $_SESSION['user']['email'] ?>">
-                        <br>
+                        </div>
+                        <div class="book_content_grid">
                         <label for="">Ghi chú:</label>
                         <textarea name="" id="" cols="30" rows="10"></textarea>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -46,13 +55,12 @@ $sodem = floor($datediff / (60 * 60 * 24));
                 </div>
                 <div class="book_conntent_right_hotel row">
                     <div class="book_conntent_right_hotel_imgae">
-                        <img src="model/content/img/sp5.png" alt="">
+                        <img src="<?=$hinh?>" alt="">
                     </div>
                     <div class="book_conntent_right_hotel_list">
                         <a href="">
-                            <p>Room P1</p>
+                            <p><?=$room_name?></p>
                         </a>
-                        <i class="fa fa-thumbs-up"></i><a href="#"> 32 Đánh giá</a>
                     </div>
                 </div>
                 <div class="book_conntent_right_details">
@@ -71,7 +79,7 @@ $sodem = floor($datediff / (60 * 60 * 24));
                         </div>
                     </div>
                     <div class="book_conntent_right_details_lisst">
-                        <span><b>1</b> phòng Suite Hướng Vườn Hồ Bơi Riêng (Garden Pool Suite) - Ăn sáng dành cho 2 người
+                        <span><?=$description?>
                         </span>
                     </div>
                 </div>
@@ -93,14 +101,14 @@ $sodem = floor($datediff / (60 * 60 * 24));
                             </td>
                         </tr>
                     </table>
-                    <div class="books_content_right_tetx">
+                    <!-- <div class="books_content_right_tetx">
                         <p><a href="">Nhập mã giảm giá</a></p>
-                    </div>
+                    </div> -->
 
-                    <div class="books_content_right_dangnhap">
+                    <!-- <div class="books_content_right_dangnhap">
                         <p>Tài khoản hotelIQ</p>
                         <p>hãy <a href="index.php?act=dangnhap">Đăng nhập</a> tài khoản của bạn để tích điểm thành viên</p>
-                    </div>
+                    </div> -->
                     <input type="text" value="<?= $room['room_price'] * $sodem ?>" name="total_money" hidden>
                     <input type="text" value="<?= $_GET['room_id']?>" name="room_id" hidden>
                 </div>

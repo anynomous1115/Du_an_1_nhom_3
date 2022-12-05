@@ -39,45 +39,26 @@
             <div id="room" class="room_type">
                 <p>Room Class</p>
                 <div class="room">
-                    <div class="roomType_Id">
-                        <a href=""><img src="model/content/img/roberto-nickson-emqnSQwQQDo-unsplash-scaled-780x595.jpg"
+                    <?php 
+                    foreach($list_type as $type){
+                        extract($type);
+                        $hinh = $hinhpath . $img_type;
+                        echo '<div class="roomType_Id">
+                        <a href=""><img src="'.$hinh.'"
                                 alt=""></a>
                         <div class="infor">
                             <a href="">
-                                <p id="name">Phòng Deluxe</p>
+                                <p id="name">Phòng '.$type_name.'</p>
                             </a>
-                            <i id="person" class="fa-solid fa-person"></i><span> 2 Người lớn</span>
-                            <i id="bed" class="fa-solid fa-bed"></i><span> 1 Giường đôi</span>
-                            <div class="roomType_Id_btn"><button type="submit">View <i class="fa-solid fa-angle-right"
-                                        style="font-size: 20px;"></i></button></div>
+                            <i id="person" class="fa-solid fa-person"></i><span> '.$max_people.' Người lớn</span>
+                            <i id="bed" class="fa-solid fa-bed"></i><span> '.$max_bed.' Giường đơn</span>
+                            <div class="roomType_Id_btn"><a href="index.php?act=loai&&type_id='.$type_id.'"><button type="submit">View <i class="fa-solid fa-angle-right"
+                                        style="font-size: 20px;"></i></button></a></div>
                         </div>
-                    </div>
-                    <div class="roomType_Id">
-                        <a href=""><img src="model/content/img/roberto-nickson-emqnSQwQQDo-unsplash-scaled-780x595.jpg"
-                                alt=""></a>
-                        <div class="infor">
-                            <a href="">
-                                <p id="name">Phòng Deluxe</p>
-                            </a>
-                            <i id="person" class="fa-solid fa-person"></i><span> 2 Người lớn</span>
-                            <i id="bed" class="fa-solid fa-bed"></i><span> 1 Giường đôi</span>
-                            <div class="roomType_Id_btn"><button type="submit">View <i class="fa-solid fa-angle-right"
-                                        style="font-size: 20px;"></i></button></div>
-                        </div>
-                    </div>
-                    <div class="roomType_Id">
-                        <a href=""><img src="model/content/img/roberto-nickson-emqnSQwQQDo-unsplash-scaled-780x595.jpg"
-                                alt=""></a>
-                        <div class="infor">
-                            <a href="">
-                                <p id="name">Phòng Deluxe</p>
-                            </a>
-                            <i id="person" class="fa-solid fa-person"></i><span> 2 Người lớn</span>
-                            <i id="bed" class="fa-solid fa-bed"></i><span> 1 Giường đôi</span>
-                            <div class="roomType_Id_btn"><button type="submit">View <i class="fa-solid fa-angle-right"
-                                        style="font-size: 20px;"></i></button></div>
-                        </div>
-                    </div>
+                    </div>';
+                    }
+                    ?>
+                    
                 </div>
             </div>
             <div id="service" class="service">

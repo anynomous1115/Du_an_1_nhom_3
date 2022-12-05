@@ -1,4 +1,4 @@
-1<?php
+<?php
 require_once "pdo.php";
 function feedback_selectall(){
     $sql = "select * from feedback ";
