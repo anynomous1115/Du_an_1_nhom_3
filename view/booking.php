@@ -1,6 +1,7 @@
 <?php
 $room = room_select_by_id($_GET['room_id']);
 extract($room);
+$hinh = $hinhpath . $img;
 $checkin = $_GET['checkin'];
 $checkout = $_GET['checkout'];
 $first_date = strtotime($checkin);
@@ -54,13 +55,12 @@ $sodem = floor($datediff / (60 * 60 * 24));
                 </div>
                 <div class="book_conntent_right_hotel row">
                     <div class="book_conntent_right_hotel_imgae">
-                        <img src="model/content/img/sp5.png" alt="">
+                        <img src="<?=$hinh?>" alt="">
                     </div>
                     <div class="book_conntent_right_hotel_list">
                         <a href="">
-                            <p>Room P1</p>
+                            <p><?=$room_name?></p>
                         </a>
-                        <i class="fa fa-thumbs-up"></i><a href="#"> 32 Đánh giá</a>
                     </div>
                 </div>
                 <div class="book_conntent_right_details">
@@ -79,7 +79,7 @@ $sodem = floor($datediff / (60 * 60 * 24));
                         </div>
                     </div>
                     <div class="book_conntent_right_details_lisst">
-                        <span><b>1</b> phòng Suite Hướng Vườn Hồ Bơi Riêng (Garden Pool Suite) - Ăn sáng dành cho 2 người
+                        <span><?=$description?>
                         </span>
                     </div>
                 </div>

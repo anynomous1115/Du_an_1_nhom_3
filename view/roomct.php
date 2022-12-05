@@ -49,7 +49,7 @@ $d2 = ceil(($d - $d1) / 60 / 60 / 24);
                     </div>
                     <div class="product-content-right-icon row">
                         <div class="product-content-right-icon-item">
-                        <i class="fa-solid fa-person"></i> <p>' . $room_people . ' người</p> 
+                        <i class="fa-solid fa-person"></i> <p>' . $max_people . ' người</p> 
                         </div>
                     </div>
 

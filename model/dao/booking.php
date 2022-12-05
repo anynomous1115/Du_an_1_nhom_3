@@ -28,9 +28,9 @@ function booking_detail_select_by_id($booking_detail_id){
     $sql = "select * from booking_detail where booking_detail_id = ?";
     return pdo_query_one($sql, $booking_detail_id);
 }
-function booking_detail_insert($booking_id,$room_id, $start_date, $end_date, $into_money){
-    $sql = "insert into booking_detail(booking_id, room_id ,start_date,end_date, into_money) values(?, ?, ?, ?, ?)";
-    pdo_execute($sql, $booking_id,$room_id, $start_date, $end_date, $into_money);
+function booking_detail_insert($booking_id,$room_id, $start_date, $end_date, $into_money, $status){
+    $sql = "insert into booking_detail(booking_id, room_id ,start_date,end_date, into_money, status) values(?, ?, ?, ?, ?, ?)";
+    pdo_execute($sql, $booking_id,$room_id, $start_date, $end_date, $into_money, $status);
 }
 function booking_detail_delete($booking_detail_id){
     $sql = "delete from booking_detail where booking_detail_id = ?";
@@ -49,7 +49,7 @@ function booking_room($id){
     return pdo_query($sql);
 }
 function rooms_statistic(){
-    $sql = "select booking_detail_id, start_date, end_date, into_money, ro.room_name, us.full_name from rooms ro join booking_detail bkd on bkd.room_id = ro.room_id join booking bk on bkd.booking_id = bk.booking_id join users us on us.user_id = bk.user_id";
+    $sql = "select booking_detail_id, start_date, end_date, into_money, status, ro.room_name, us.full_name from rooms ro join booking_detail bkd on bkd.room_id = ro.room_id join booking bk on bkd.booking_id = bk.booking_id join users us on us.user_id = bk.user_id";
     return pdo_query($sql);
 }
 function booking($user_id){
@@ -59,4 +59,8 @@ function booking($user_id){
 function booking_user($room_id){
     $sql = "SELECT user_id FROM booking bk JOIN booking_detail bd on bk.booking_id = bd.booking_id WHERE bd.room_id = ?";
     return pdo_query($sql, $room_id);
+}
+function booking_details_update( $status, $booking_detail_id ){
+    $sql = "UPDATE booking_detail set status = ? WHERE booking_detail_id = ?";
+    pdo_execute($sql,$status, $booking_detail_id);
 }

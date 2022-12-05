@@ -29,7 +29,7 @@
         $xoa_room= "index.php?act=xoa_room&room_id=" . $room_id;
         $hinhpath = "../model/content/img/" . $img;
         if (is_file($hinhpath)) {
-            $img = "<img src='" . $hinhpath . "' width='50%'>";
+            $img = "<img src='" . $hinhpath . "' width='80%'>";
         } else {
             $img = "";
         }

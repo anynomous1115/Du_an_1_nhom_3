@@ -75,6 +75,10 @@ html {
     border-style: none;
 
 }
+.login a{
+    text-decoration: none;
+    color: #0a0a0a;
+}
 .menucategory{
     display: none;
     position: absolute;
@@ -570,7 +574,7 @@ transition: all 0.5 ease;
 }
 .cart_content_right_text{
     margin-bottom: 10px;
-}
+}loadroom
 .cart_content_right_text input{
     margin: 20px 0 0 10px;
     text-align: left;
@@ -588,6 +592,7 @@ transition: all 0.5 ease;
     padding: 0 10px;
     height: 35px;
     cursor: pointer;
+    margin-top: 16px;
 }
 
 .cart_content_right_button button:first-child:hover{
@@ -793,6 +798,9 @@ h2{
 .books_content_right_dangnhap p {
     font-size: 18px;
 }
+.book_conntent_right_hotel_texttt{
+    padding-left: 30px;
+}
 /* Payment */
 .payment{
 padding: 100px 50px;
@@ -832,10 +840,10 @@ padding: 100px 50px;
     cursor: pointer;
 }
 .pay_content_left_method_payment_items_imgi{
-    width: 20%
+    width: 80%;
 }
 .pay_content_left_method_payment_items_imgi img{
-   width: 100%;
+   width: 50%;
 }
 
 /* footer */

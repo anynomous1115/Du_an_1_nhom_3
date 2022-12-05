@@ -8,7 +8,7 @@ if (isset($_POST['checkIn'])) {
 if (empty($room_id)) {
     $rooms = room_selectall();
 } else {
-    $sql = "select * from rooms where room_id != 0 ";
+    $sql = "select * , tp.max_people , tp.max_bed FROM rooms ro JOIN type_room tp on tp.type_id = ro.type_id where room_id != 0 ";
     foreach ($room_id as $id) {
         extract($id);
         $sql =  $sql . " and room_id != " . $room_id . "";
@@ -27,11 +27,11 @@ if (empty($room_id)) {
         <form action="index.php?act=search" method="POST">
             <div class="checkIn">
                 <div class="label"><label for="inputEmail4">Ngày Bắt Đầu</label><br></div>
-                <div class="input"><input type="date" value="<?= $checkIn ?>" id="startdateId" class="form-control" required></div>
+                <div class="input"><input type="date" value="<?= $checkIn ?>" id="startdateId" class="form-control" name="checkIn" required></div>
             </div>
             <div class="checkOut">
                 <div class="label"><label for="inputEmail4">Ngày Kết Thúc</label><br></div>
-                <div class="input"><input type="date" value="<?= $checkOut ?>" id="enddateId" class="form-control" required></div>
+                <div class="input"><input type="date" value="<?= $checkOut ?>" id="enddateId" class="form-control" name="checkOut" required></div>
             </div>
             <div class="saerch_btn">
                 <div class="btn"><input type="submit" value="Book Now"></div>
@@ -58,10 +58,10 @@ if (empty($room_id)) {
                          <div class="imgRoom"><a href="' . $link_room . '"><img src="' . $hinh . '" alt=""></a></div>
                          <div class="infor">
                            <a href="' . $link_room . '"><p id="name">' . $room_name . '</p></a>
-                           <i class="fa-solid fa-person"></i><span> '.$room_people.' Người lớn</span>
-                           <i class="fa-solid fa-bed"></i><span> 1 Giường đôi</span>
+                           <i class="fa-solid fa-person"></i><span> '.$max_people.' Người lớn</span>
+                           <i class="fa-solid fa-bed"></i><span> '.$max_bed.' Giường đơn</span>
                            <i class="fa-solid fa-house"></i><span>35m<sup>2</sup></span><br>
-                           <p id="note">Hotale Suites has been honored with the prestigious Five-Star Award by Forbes.</p>
+                           <p id="note">'.$description.'</p>
                            <i class="fa-solid fa-hand-holding-dollar"></i><span id="span_price">' . $room_price . ' VNĐ</span>';
                 if (isset($_SESSION['user'])) {
                     if (!$_SESSION['user']['role'] == 0) {

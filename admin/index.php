@@ -124,6 +124,43 @@ if (isset($_GET['act'])) {
             $thongke = rooms_statistic();
             include "booking/list.php";
             break;
+        case 'xacnhan':
+            $thongke = rooms_statistic();
+            if(isset($_GET['booking_detail_id'])){
+            $booking_detail_id = $_GET['booking_detail_id'];
+            $status = 2; 
+            booking_details_update($status,$booking_detail_id);
+            }
+            $thongke = rooms_statistic();
+            include "booking/list.php";
+            break;
+        case 'huy':
+            if(isset($_GET['booking_detail_id'])){
+            $booking_detail_id = $_GET['booking_detail_id'];
+            $status = 3; 
+            booking_details_update($status,$booking_detail_id);
+            }
+            $thongke = rooms_statistic();
+            include "booking/list.php";
+            break;
+        case 'checkin':
+            if(isset($_GET['booking_detail_id'])){
+            $booking_detail_id = $_GET['booking_detail_id'];
+            $status = 1; 
+            booking_details_update($status,$booking_detail_id);
+            }
+            $thongke = rooms_statistic();
+            include "booking/list.php";
+            break; 
+        case 'checkout':
+            if(isset($_GET['booking_detail_id'])){
+            $booking_detail_id = $_GET['booking_detail_id'];
+            $status = 0; 
+            booking_details_update($status,$booking_detail_id);
+            }
+            $thongke = rooms_statistic();
+            include "booking/list.php";
+            break;         
         case 'deletebooking':
             $id = $_GET['booking_detail_id'];
             booking_detail_delete($id);
@@ -150,7 +187,9 @@ if (isset($_GET['act'])) {
         case 'thongke':
             $thongke = thongke();
             include "thongke/thongke.php";
-            break;    
+            break;
+        
+
         default:
             include "home.php";
             break;

@@ -102,6 +102,9 @@ input{
   margin-top: 10px;
   margin-bottom: 10px;
 }
+td{
+  height: 80px;
+}
 button{
   display: inline-block;
   background: #ff523b;

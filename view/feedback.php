@@ -16,7 +16,7 @@ $feedback = feedback_select_by_room($room_id);
     }
     .box-title{
         color: #4790CE;
-        font-size: 36px;
+        font-size: 24px;
     }
 
     hr {
