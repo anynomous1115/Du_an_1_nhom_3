@@ -78,14 +78,14 @@ $d2 = ceil(($d - $d1) / 60 / 60 / 24);
     </div>
 
 </section>
- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> 
-<script>
-    $(document).ready(function() {
-        $("#danhgia").load("view/feedback.php", { room_id: <?= $room_id ?>});
-    });
-</script>
-<div id="danhgia">
-</div>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                $("#danhgia").load("view/feedback.php", {room_id: <?=$room_id ?>});
+            });
+        </script>
+        <article id="danhgia">
+        </article>
 <section class="product-related">
     <div class="product-related-title">
         <p>Các phòng khác liên quan</p>

@@ -56,3 +56,7 @@ function booking($user_id){
     $sql = "select ro.room_name,bk.booking_date, ro.img, start_date, end_date, into_money from  rooms ro join booking_detail bd on bd.room_id = ro.room_id join booking bk on bd.booking_id = bk.booking_id WHERE bk.user_id = ?";
     return pdo_query($sql, $user_id);
 }
+function booking_user($room_id){
+    $sql = "SELECT user_id FROM booking bk JOIN booking_detail bd on bk.booking_id = bd.booking_id WHERE bd.room_id = ?";
+    return pdo_query($sql, $room_id);
+}

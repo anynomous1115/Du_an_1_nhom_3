@@ -617,6 +617,10 @@ h2{
      border: 1px solid #40afe2;
      margin-bottom: 20px;
 }
+.book_content_grid{
+    display: grid;
+    grid-template-columns: 250px 300px;
+}
 .book_conntent_left_tt input{
     border: 1px solid #e4e2e2;
     width: 300px;
@@ -631,6 +635,7 @@ h2{
 .book_conntent_left_tt textarea{
     width: 300px;
     height: 30px;
+    margin-left: 30px;
     border: 1px solid #dddd;
 }
 .book_conntent_right{

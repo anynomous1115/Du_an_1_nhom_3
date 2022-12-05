@@ -6,6 +6,7 @@ include "../model/dao/booking.php";
 include "../model/dao/loaiphong.php";
 include "../model/dao/service.php";
 include "../model/dao/user.php";
+include "../model/dao/thongke.php";
 ?>
 <header>
     <?php
@@ -146,6 +147,10 @@ if (isset($_GET['act'])) {
             $list_user = user_select_all();
             include "user/list.php";
             break;
+        case 'thongke':
+            $thongke = thongke();
+            include "thongke/thongke.php";
+            break;    
         default:
             include "home.php";
             break;
