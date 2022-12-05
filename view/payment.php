@@ -37,6 +37,9 @@
                             <input name="method_payment" type="radio">
                             <label for="">Thanh toán qua mã QR</label>
                         </div>
+                        <div class="pay_content_left_method_payment_items_imgi">
+                            <img src="../model/content/img/qr.jpg" alt="">
+                        </div>
                         <div class="pay_content_left_method_payment_items">
                             <input name="method_payment" type="radio">
                             <label for="">Thanh toán qua Momo</label>
@@ -55,9 +58,28 @@
                     <div class="pay_content_right_button">
                         <input type="text" placeholder="Quay lại chi tiết đặt phòng">
                         <button><i class="fa-solid fa-check"></i></button>
+                </div>
+
+                <div class="book_conntent_right_hotel row">
+                    <div class="book_conntent_right_hotel_imgae">
+                        <img src="../model/content/img/sp5.png" alt="">
                     </div>
+                    <div class="book_conntent_right_hotel_list">
+                        <a href="">
+                            <p>Room P1</p>
+                        </a>
+                        <i class="fa fa-thumbs-up"></i><a href="#"> 32 Đánh giá</a>
+                    </div>
+                    <div class="book_conntent_right_hotel_texttt">
+                        Tổng tiền khách hàng cần thanh toán : 20000000<sup>đ</sup>
+                    </div>
+                </div>
 
                 </div>
+                <div class="cart_content_right_button">
+                    <button>Tiếp tục xem phòng</button>
+                    <button>Thanh toán</button>
+                  </div>
             </div>
         </div>
     </section>

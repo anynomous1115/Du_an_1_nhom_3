@@ -771,6 +771,9 @@ h2{
 .books_content_right_dangnhap p {
     font-size: 18px;
 }
+.book_conntent_right_hotel_texttt{
+    padding-left: 30px;
+}
 /* Payment */
 .payment{
 padding: 100px 50px;

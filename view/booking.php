@@ -81,7 +81,7 @@ $sodem = floor($datediff / (60 * 60 * 24));
                             <th colspan="2">Chi tiết giá phòng</th>
                         </tr>
                         <tr>
-                            <td>Tổng tiền phòng</td>
+                            <td>Giá phòng</td>
                             <td>
                                 <p><?= $room['room_price'] ?><sup>đ</sup></p>
                             </td>
