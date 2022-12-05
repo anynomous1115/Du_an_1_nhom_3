@@ -62,6 +62,7 @@ html {
 }
 
 .login {
+    position: relative;
     padding-top: 15px;
     margin-left: 400px;
     margin-right: 50px;
@@ -74,13 +75,31 @@ html {
     border-style: none;
 
 }
-.login a{
-    color: #111;
-    font-size: 16px;
-    text-decoration: none;
+.menucategory{
+    display: none;
+    position: absolute;
+    border-radius: 5px;
+    padding-top: 16px;
+    background-color: #FFFFFF;
+    text-align: left;
 }
-.login #logOut,
-.login #logIn_admin{
+#gach label{
+    font-size: 18px;
+    font-weight: bold;
+}
+.menucategory li {
+    float: none;
+    list-style: none;
+    width: 100%;
+    margin-top: 16px;
+    margin-left: 8px;
+}
+
+.menucategory li a {
+    text-decoration: none;
+    color: #252525;
+    font-size: 16px;
+    font-weight: bold;
 }
 .title {
     background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 100)), url(https://a6e8z9v6.stackpathcdn.com/hotale/resort/wp-content/uploads/sites/2/2021/11/home-resort-hero-bg.jpg?fbclid=IwAR3iXwGTc78THodTfuHE_Gz12eHtPIVBA_DWtrOjdoBYYYZT4tgzI-AKOug);
@@ -174,9 +193,7 @@ html {
 
 .text>p:last-child {
     width: 100%;
-
     padding-top: 90px;
-    
     font-size: 34px;
     line-height: 1.4;
     font-weight: 400;
