@@ -34,7 +34,7 @@
 </div>
 <div class="artical">
     <div class="box-title">Lịch sử đặt phòng</div>
-    <table class="cart">
+    <table class="cart"  border="1">
         <tr>
             <th>Tên phòng</th>
             <th>Hình ảnh phòng</th>
@@ -42,6 +42,7 @@
             <th>Ngày thuê</th>
             <th>Ngày trả</th>
             <th>Thành tiền</th>
+            <th>Trạng thái</th>
         </tr>
         <?php
         foreach ($list as $cart) {
@@ -54,8 +55,20 @@
                 <td>'.$booking_date.'</td>
                 <td>' . $start_date . '</td>
                 <td>' . $end_date . '</td>
-                <td>' . $into_money . 'VND</td>
-            </tr>';
+                <td>' . $into_money . 'VND</td>';
+                if($status == 0){
+                    echo '<td> Đã thuê phòng
+                    </td>';
+                    }else if($status == 1){
+                        echo '<td>Đang thuê phòng</td>';
+                    }else if($status == 2){
+                        echo '<td>Đang chờ nhận phòng</td>';
+                    }else if($status == 3){
+                        echo '<td>Đơn đặt phòng bị hủy</td>';
+                    }else if($status == 4){
+                        echo '<td>Đang chờ thanh toán</td>';
+                    }
+            echo  '</tr>';
         }
         ?>
     </table>

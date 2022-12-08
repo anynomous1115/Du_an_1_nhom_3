@@ -93,7 +93,13 @@
             font-weight: 700;
             margin-top: 32px;
         }
-
+        .forgot  a{
+            text-decoration: none;
+            color: #37A9CD;
+        }
+        .forgot  a:hover{
+            text-decoration: underline;
+        }
         .join {
             text-align: center;
             margin-top: 16px;
@@ -138,7 +144,7 @@
                         </div>
                     </div>
                     <div class="">
-                        <div class="forgot">Quên mật khẩu</div>
+                        <div class="forgot"><a href="index.php?act=quenmk">Quên mật khẩu</a></div>
                         <div class="join">Bạn chưa có tài khoản <span class="forgot"><a href="index.php?act=dangki">Đăng kí ngay</a></span></div>
                     </div>
             </div>

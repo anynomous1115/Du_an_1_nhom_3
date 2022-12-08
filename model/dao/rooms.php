@@ -5,6 +5,17 @@ function room_selectall(){
     $sql = "SELECT * , tp.max_people , tp.max_bed FROM rooms ro JOIN type_room tp on tp.type_id = ro.type_id";
     return pdo_query($sql);
 }
+function rooms_selectall($keyw,$type_id){
+    $sql = "select * from rooms where 1";
+    if($keyw != ""){
+        $sql.=" and room_name like '%".$keyw."%'";
+    }
+    if($type_id > 0){
+        $sql.=" and type_id = '".$type_id."'";
+    }
+    $sql.= " order by room_name desc"; 
+    return pdo_query($sql);
+}
 function room_selectall_type($type_id){
     $sql = "SELECT * , tp.max_people , tp.max_bed, tp.type_name FROM rooms ro JOIN type_room tp on tp.type_id = ro.type_id where tp.type_id = ?";
     return pdo_query($sql, $type_id);

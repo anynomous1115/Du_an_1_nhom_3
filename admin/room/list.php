@@ -17,7 +17,6 @@
         <th></th>
         <th>Mã phòng</th>
         <th>Tên phòng</th>
-        <th>Số người</th>
         <th width="150px">Hình</th>
         <th >Mô tả</th>
         <th>Giá phòng</th>
@@ -37,7 +36,6 @@
                 <td><input type="checkbox"></td>
                 <td>' . $room_id . '</td>
                 <td>' . $room_name . '</td>
-                <td>' . $room_people . '</td>
                 <td>' . $img . '</td>
                 <td>' . $description . '</td>
                 <td>' . $room_price . ' VNĐ</td>

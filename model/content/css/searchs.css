@@ -107,7 +107,7 @@
 
 .roomId {
     display: grid;
-    grid-template-columns: 700px 450px;
+    grid-template-columns: 60% 40%;
     grid-gap: -32px;
     width: 100%;
 

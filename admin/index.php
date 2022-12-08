@@ -6,6 +6,7 @@ include "../model/dao/booking.php";
 include "../model/dao/loaiphong.php";
 include "../model/dao/service.php";
 include "../model/dao/user.php";
+include "../model/dao/feedback.php";
 include "../model/dao/thongke.php";
 ?>
 <header>
@@ -86,7 +87,7 @@ if (isset($_GET['act'])) {
                 $type_id = 0;
             }
             $list_type_room = type_selectall();
-            $list_room = room_selectall($keyw, $type_id);
+            $list_room = rooms_selectall($keyw, $type_id);
             include "room/list.php";
             break;
         case 'xoa_room':
@@ -186,10 +187,28 @@ if (isset($_GET['act'])) {
             break;
         case 'thongke':
             $thongke = thongke();
+            $room_count = count_room();
+            extract($room_count);
+            $count_user = count_user();
+            extract($count_user);
             include "thongke/thongke.php";
             break;
-        
-
+        case 'qlyfeedback':
+            $listfb = thong_ke_feedback();
+            include 'feedback/list.php';
+            break;
+        case 'ctbl':
+            $room_id = $_GET['room_id'];
+            $items = feedback_select_by_room($room_id);
+            include 'feedback/detail.php';
+            break;
+        case 'xoadg':
+            $room_id = $_GET['room_id'];
+            $feedback_id = $_GET['feedback_id'];
+            feedback_delete($feedback_id);
+            $listfb = thong_ke_feedback();
+            include 'feedback/list.php';
+            break;
         default:
             include "home.php";
             break;
