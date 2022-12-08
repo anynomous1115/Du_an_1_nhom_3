@@ -20,3 +20,7 @@ function feedback_update($content, $room_id, $user_id, $feedback_date, $feedback
     $sql = "update feedback set content = ?, room_id = ?, user_id = ?, feedback_date = ? where feedback_id = ?";
     pdo_execute($content, $room_id, $user_id, $feedback_date, $feedback_id);
 }
+function user_feedback($room_id){
+    $sql = "SELECT bk.user_id FROM users us JOIN booking bk ON us.user_id = bk.user_id JOIN booking_detail bd ON bk.booking_id = bd.booking_id JOIN rooms ro ON bd.room_id = ro.room_id WHERE bd.room_id = ? GROUP BY bk.user_id";
+    return pdo_query($sql, $room_id);
+}

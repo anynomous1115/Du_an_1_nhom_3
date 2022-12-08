@@ -23,7 +23,7 @@
             text-align: center;
         }
 
-        .title {
+        .hi_title {
             margin-top: 50px;
             text-align: center;
         }
@@ -33,7 +33,9 @@
             font-weight: 600;
             font-size: 16px;
         }
-
+        .logos{
+            margin-top: 70px;
+        }
         .account {
             color: #1A202C;
             font-weight: 900;
@@ -41,7 +43,7 @@
             margin-top: 16px;
         }
 
-        .email {
+        .form-group {
             margin-top: 40px;
             color: #4A5568;
             font-size: 16px;
@@ -53,7 +55,7 @@
             margin-left: 440px;
         }
 
-        .email input {
+        .form-group input {
             margin-top: 11px;
             width: 400px;
             height: 50px;
@@ -63,7 +65,7 @@
             padding: 17px 0px 17px 17px;
         }
 
-        .login button {
+        .reset button {
             width: 400px;
             height: 50px;
             border-radius: 5px;
@@ -74,17 +76,6 @@
             font-weight: 600;
             margin-top: 30px;
         }
-
-        .google button {
-            color: #FFFFFF;
-            background-color: #2D3748;
-            width: 400px;
-            height: 50px;
-            font-size: 16px;
-            font-weight: 600;
-            margin-top: 15px;
-        }
-
         .forgot {
             text-align: center;
             color: #37A9CD;
@@ -92,12 +83,16 @@
             font-weight: 700;
             margin-top: 32px;
         }
-
+        .forgot  a{
+            text-decoration: none;
+            color: #37A9CD;
+        }
+        .forgot  a:hover{
+            text-decoration: underline;
+        }
         .join {
             text-align: center;
             margin-top: 16px;
-            color: #4A5568;
-            font-size: 18px;
             font-weight: 600;
         }
     </style>
@@ -106,24 +101,24 @@
 <body>
     <div class="container">
         <header>
-            <div class="logo">
+            <div class="logos">
                 <img src="https://www.brandbucket.com/sites/default/files/logo_uploads/315001/large_hoteliq.png" alt="">
             </div>
         </header>
         <main>
             <div class="all">
-                <div class="title">
+                <div class="hi_title">
                     <div class="welcome">Welcome back</div>
                     <h1 class="account">Reset Password</h1>
                 </div>
-                <form action="index.php?act=dangnhap" method="POST" name="frm" onsubmit="return validate()">
+                <form action="index.php?act=return_mk" method="POST" name="frm" id="form-2">
                     <div class="form">
-                        <div class="email">
+                        <div class="form-group">
                             <p>Email</p>
-                            <input type="email" required placeholder="John.snow@gmail.com" name="email">
-                            <label for="" id="loiemail"></label>
+                            <input type="email" required placeholder="John.snow@gmail.com" id="email" name="email">
+                            <label for="" class="form-message"></label>
                         </div>
-                        <div class="login">
+                        <div class="reset">
                             <button>Reset password</button>
                         </div>
                     </div>
@@ -135,42 +130,16 @@
         </main>
     </div>
     <script>
-        function thongBaoLoi(element, msg) {
-            document.getElementById(element).innerHTML = msg;
-        }
-
-        function validate() {
-            const email = document.frm.email.value;
-            const pass = document.frm.pass.value;
-            var ok = true;
-            var regEmail = /^\w+@\w+\.\w{2,5}$/;
-            if (email == "") {
-                thongBaoLoi("loiemail", "Email không được để trống");
-                ok = false;
-            } else if (!email.match(regEmail)) {
-                thongBaoLoi("loiemail", "Email không đúng định dạng");
-                ok = false;
-            } else {
-                thongBaoLoi("loiemail", "");
-            }
-            if (pass == "") {
-                thongBaoLoi("loipass", "Password không được để trống");
-                ok = false;
-            } else if (pass.length < 8) {
-                thongBaoLoi("loipass", "Password không được nhỏ hơn 8");
-                ok = false;
-            } else {
-                thongBaoLoi("loipass", "");
-            }
-            if (ok == false) {
-                return false;
-            }
-            if (ok == true) {
-                alert("Đăng nhập thành công");
-                return true;
-
-            }
-        }
+        document.addEventListener('DOMContentLoaded', function () {
+        Validator({
+          form: '#form-2',
+          formGroupSelector: '.form-group',
+          errorSelector: '.form-message',
+          rules: [
+            Validator.isEmail('#email'),
+          ]
+        });
+      });
     </script>
 </body>
 

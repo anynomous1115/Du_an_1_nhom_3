@@ -34,25 +34,12 @@ $hinh = $hinhpath . $img;
                         <img src="model/content/img/qr.jpg" alt="" class="qr" style="display: none;">
                         <p class="qr" style="display: none;">Nội dung chuyển khoản là : Trả tiền thuê Phòng <?= $room_name ?> </p>
                     </div>
-                    <div class="pay_content_left_method_payment_items">
-                        <input name="method_payment" type="radio">
-                        <label for="">Thanh toán qua Momo</label>
-                    </div>
-                    <div class="pay_content_left_method_payment_items_imgi">
-                        <img src="model/content/img/momo.jpg" alt="">
-                    </div>
+                    
                 </div>
 
             </div>
             <div class="pay_content_right">
-                <div class="pay_content_right_button">
-                    <input type="text" placeholder="Nhập mã giảm giá / Quà tặng">
-                    <button><i class="fa-solid fa-check"></i></button>
-                </div>
-                <div class="pay_content_right_button">
-                    <input type="text" placeholder="Quay lại chi tiết đặt phòng">
-                    <button><i class="fa-solid fa-check"></i></button>
-                </div>
+                
 
                 <div class="book_conntent_right_hotel row">
                     <div class="book_conntent_right_hotel_imgae">

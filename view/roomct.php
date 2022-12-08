@@ -106,9 +106,10 @@ $d2 = ceil(($d - $d1) / 60 / 60 / 24);
         }
         foreach ($room as $roomct) {
             extract($roomct);
+            $hinhs = $hinhpath . $img;
             $link_room = "index.php?act=roomct&&room_id=" . $room_id . "&&checkin=" . $checkin . "&&checkout=" . $checkout;
             echo '        <div class="product-relate-items">
-    <a href="' . $link_room . '"><img src="' . $hinh . '" alt=""></a>
+    <a href="' . $link_room . '"><img src="' . $hinhs . '" alt=""></a>
     <h1>' . $room_name . '</h1>
     <p>' . $room_price . '<sup>đ</sup></p>
 </div> ';

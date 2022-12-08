@@ -75,7 +75,14 @@ $feedback = feedback_select_by_room($room_id);
         ?>
         <?php
         if (isset($_SESSION['user']['user_id'])) {
-            $user_id = $_SESSION['user']['user_id'];
+            $user = $_SESSION['user']['user_id'];
+            $list_user_id = user_feedback($room_id);
+            $list = [];
+            foreach($list_user_id as $id){
+                extract($id);
+                array_push($list, $user_id);
+            }
+            if(in_array($user, $list, true)){
         ?>
             <div class="binhluanform">
                 <form action="<?= $_SERVER['PHP_SELF']; ?>" method="post">
@@ -86,7 +93,7 @@ $feedback = feedback_select_by_room($room_id);
                 </form>
             </div>
 
-        <?php }
+        <?php }}
         ?>
 
         <?php

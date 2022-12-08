@@ -53,6 +53,23 @@ if(isset($_GET['act'])){
             }
             include 'view/dangnhap.php';
             break;
+        case 'quenmk':
+            include 'view/quenmk.php';
+            break;
+        case 'return_mk':
+            if(isset($_POST['email'])){
+                $email = $_POST['email'];
+                $checkemail = check_email($email);
+                if (is_array($checkemail)){
+                    $_SESSION['check'] = $checkemail;
+                  echo '<script>alert('.$_SESSION['check']['password'].');</script>';
+                  include "view/mail.php";
+                }
+            }else{
+                echo '<script>alert("Email không có trên hệ thống, Bạn vui lòng thử lại");</script>';
+            }
+            include 'view/quenmk.php';
+            break;      
         case 'dangxuat':
             unset($_SESSION['user']);
             header('Location: index.php');
@@ -113,7 +130,8 @@ if(isset($_GET['act'])){
             extract($name_type);
             $loadroom_type = room_selectall_type($type_id);
             include 'view/type_room.php';
-            break;            
+            break;
+                    
         default:
         include "view/home.php";
         include "view/footer.php";

@@ -38,13 +38,9 @@ function user_change_password($user_id, $mat_khau_moi){
     $sql = "UPDATE users SET password=? WHERE user_id=?";
     pdo_execute($sql, $mat_khau_moi, $user_id);
 }
-function check_account($full_name){
-    $sql = "select * from users where full_name='".$full_name."' ";
-    return pdo_query_one($sql);
-}
-function check_email($email, $ho_ten){
-    $sql = "select * from khach_hang where email='".$email."'AND ho_ten='".$ho_ten."' ";
-    return pdo_query_one($sql);
+function check_email($email){
+    $sql = "select * from users where email=?";
+    return pdo_query($sql, $email);
 }
 function check_user($email,$password){
     $sql = "select * from users where email='".$email."' AND password='".$password."'";

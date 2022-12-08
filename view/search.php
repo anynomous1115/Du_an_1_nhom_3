@@ -16,7 +16,7 @@ if (empty($room_id)) {
     $rooms = pdo_query($sql);
 }
 ?>
-<link rel="stylesheet" href="model/content/css/search.css">
+<link rel="stylesheet" href="model/content/css/searchs.css">
 <div class="title">
     <p>Room Search</p>
 </div>
