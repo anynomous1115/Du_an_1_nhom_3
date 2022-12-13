@@ -1,3 +1,6 @@
+<?php 
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,10 +10,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://kit.fontawesome.com/95d2de3e8b.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="../model/content/css/adminstyles.css">
+    <link rel="stylesheet" href="../model/content/css/adminstylec.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="../model/content/js/index.js"></script>
 </head>
 
 <body>
@@ -22,6 +26,9 @@
             <main class="menu">
                 <a href="index.php" class="element">
                     <div>Dashboard</div>
+                </a>
+                <a href="../index.php" class="element">
+                    <div>Trang website</div>
                 </a>
                 <a href="index.php?act=list_type_room" class="element">
                     <div>Quản lý loại phòng</div>
@@ -36,12 +43,20 @@
                     <div>Quản lý đánh giá</div>
                 </a>
                 <a href="index.php?act=qlykh" class="element">
-                 <div>Quản lý khách hàng</div>
-                 </a>
-                 <a href="index.php?act=thongke" class="element">
-                 <div>Thống kê</div>
-                 </a>
+                    <div>Quản lý khách hàng</div>
+                </a>
+                <?php
+                if(isset($_SESSION['user'])){
+                if($_SESSION['user']['role']==0){
+                    echo '<a href="index.php?act=qlynv" class="element">
+                          <div>Quản lý nhân viên</div>
+                            </a>';
+                }}
+                ?>
+                
+                <a href="index.php?act=thongke" class="element">
+                    <div>Thống kê</div>
+                </a>
             </main>
         </aside>
         <article>
-         

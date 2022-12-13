@@ -21,7 +21,7 @@ if(isset($_GET['act'])){
                 $phone_number = $_POST['phone_number'];
                 $email = $_POST['email'];
                 $gender = $_POST['gender'];
-                $user_name = $_POST['username'];
+                $user_name = $_POST['user_name'];
                 $password = $_POST['password'];
                 $CCCD_id = $_POST['CCCD_id'];
                 $birth_date = $_POST['birth_date'];
@@ -60,16 +60,39 @@ if(isset($_GET['act'])){
             if(isset($_POST['email'])){
                 $email = $_POST['email'];
                 $checkemail = check_email($email);
-                if (is_array($checkemail)){
-                    $_SESSION['check'] = $checkemail;
-                  echo '<script>alert('.$_SESSION['check']['password'].');</script>';
-                  include "view/mail.php";
+                if(empty($checkemail)){
+                    echo'<script>alert("Email của bạn không có trên hệ thống, bạn vui lòng kiểm tra và thử lại")</script>';
+                    include 'view/quenmk.php';
+                }else{
+                    include 'view/sendmail.php';
+                    include 'view/dangnhap.php';
                 }
-            }else{
-                echo '<script>alert("Email không có trên hệ thống, Bạn vui lòng thử lại");</script>';
             }
-            include 'view/quenmk.php';
-            break;      
+            break;
+        case 'updatetk':
+            $user = user_select_by_id($_SESSION['user']['user_id']);
+            if(isset($_POST['full_name'])){
+                $user_id = $_SESSION['user']['user_id'];
+                $full_name = $_POST['full_name'];
+                $phone_number = $_POST['phone_number'];
+                $email = $_POST['email'];
+                $gender = $_POST['gender'];
+                $user_name = $_POST['user_name'];
+                $password = $_POST['password'];
+                $CCCD_id = $_POST['CCCD_id'];
+                $birth_date = $_POST['birth_date'];
+                $address = $_POST['address'];
+                $nationality = $_POST['nationality'];
+                $role = $_POST['role'];
+                users_update($user_id, $full_name, $phone_number ,$address, $CCCD_id, $birth_date,$email, $user_name, $password, $gender, $nationality, $role);
+                header('Location: index.php?act=capnhat');
+            }
+            include 'view/updatetk.php';
+            break; 
+        case 'capnhat':
+            echo'<script>alert("Cập nhật thành công")</script>';
+            include 'view/home.php';
+            break;             
         case 'dangxuat':
             unset($_SESSION['user']);
             header('Location: index.php');
@@ -81,6 +104,7 @@ if(isset($_GET['act'])){
         case 'roomct':
             if (isset($_GET['room_id']) && ($_GET['room_id'] > 0)) {
               $one_room = room_getinfo($_GET['room_id']);
+              $list_img = room_img($_GET['room_id']);
             } 
             $list_type = type_selectall();
             extract($one_room);
@@ -141,4 +165,3 @@ if(isset($_GET['act'])){
     include "view/home.php";
 }
 include "view/footer.php";
-?>

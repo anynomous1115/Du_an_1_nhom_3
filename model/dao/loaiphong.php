@@ -7,9 +7,9 @@ function type_selectall(){
 }
 
 //thêm mới loại
-function type_insert($type_name){
-    $sql = "insert into type_room(type_name) values(?)";
-    pdo_execute($sql,$type_name);
+function type_insert($type_name, $img_type, $max_people, $max_bed){
+    $sql = "insert into type_room(type_name, img_type, max_people, max_bed) values(?,?,?,?)";
+    pdo_execute($sql,$type_name, $img_type, $max_people, $max_bed);
 }
 //xóa
 function type_delete($type_id){

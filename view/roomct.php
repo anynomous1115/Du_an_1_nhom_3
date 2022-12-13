@@ -33,11 +33,18 @@ $d2 = ceil(($d - $d1) / 60 / 60 / 24);
     </div>';
         ?>
         <div class="product-content-left-small-img">
-            <img src="model/content/img/sp1.png" alt="">
+            <?php
+            foreach($list_img as $room_image){
+                extract($room_image);
+                $img = $hinhpath.$room_img;
+                echo '<img src="'.$img.'" alt="">';
+            }
+            ?>
+            <!-- <img src="model/content/img/sp1.png" alt="">
             <img src="model/content/img/sp2.png" alt="">
             <img src="model/content/img/sp6.png" alt="">
             <img src="model/content/img/sp5.png" alt="">
-            <img src="model/content/img/sp7.png" alt="">
+            <img src="model/content/img/sp7.png" alt=""> -->
         </div>
     </div>
     <?php echo '
@@ -59,11 +66,17 @@ $d2 = ceil(($d - $d1) / 60 / 60 / 24);
                     <div class="product-content-right-descroom">
                         <p>' . $description . '</p>
                     </div>
-                    <div class="product-content-right-button">
-                    <a href="' . $booking_room . '"><button><i class="fa-solid fa-cart-flatbed-suitcase"></i> <p>Đặt phòng</p></button></a>  
+                    <div class="product-content-right-button">';
+                    if(isset($checkin)&&isset($checkout)){
+                    echo ' <a href="' . $booking_room . '"><button><i class="fa-solid fa-cart-flatbed-suitcase"></i> <p>Đặt phòng</p></button></a>  
                                    
-                        <button><p>Đặt tại khách sạn</p></button>
-                    </div>
+                        <button><p>Đặt tại khách sạn</p></button>';
+                    }else if($_SESSION['user']['role']==0){
+                         echo '<b>Admin không được đặt phòng</b>';
+                    }else{
+                        echo '<b>Bạn muốn đặt phòng vui lòng quay lại trang chủ tìm kiếm ngày</b>'; 
+                    }
+                    echo '</div>
                     <div class="product-content-right-tiennghi row">';
     foreach ($listsv as $service) {
         extract($service);

@@ -4,6 +4,10 @@ function thongke(){
     $sql = "select tp.type_name from booking_detail bd JOIN rooms ro on bd.room_id = ro.room_id  JOIN type_room tp on ro.type_id = tp.type_id GROUP BY tp.type_name ORDER BY COUNT(bd.room_id) DESC LIMIT 1";
     return pdo_query($sql);
 }
+function sum_money(){
+    $sql = "SELECT SUM(into_money) as tong FROM booking_detail";
+    return pdo_query($sql);
+}
 function count_user(){
     $sql = "SELECT COUNT(*) as user_sigin FROM users WHERE role =2";
     return pdo_query_one($sql);

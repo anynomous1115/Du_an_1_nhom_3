@@ -6,9 +6,9 @@ function users_insert( $full_name, $phone_number ,$address, $CCCD_id, $birth_dat
     pdo_execute($sql, $full_name, $phone_number ,$address, $CCCD_id, $birth_date,$email, $user_name, $password, $gender, $nationality, $role );
 }
 
-function users_update($user_id ,$full_name, $phone_number ,$address, $CCCD_id, $birth_date, $user_name, $password, $gender, $nationality, $role){
-    $sql = "UPDATE users SET full_name=?, phone_number=? ,address=?, CCCD_id=?, birth_date=?, user_name=?, password=?, gender=?, nationality=?, role=? WHERE ma_kh=?";
-    pdo_execute($user_id ,$full_name, $phone_number ,$address, $CCCD_id, $birth_date, $user_name, $password, $gender, $nationality, $role);
+function users_update($user_id ,$full_name, $phone_number ,$address, $CCCD_id, $birth_date,$email, $user_name, $password, $gender, $nationality, $role){
+    $sql = "UPDATE users SET full_name=?, phone_number=? ,address=?, CCCD_id=?, birth_date=?,email=?, user_name=?, password=?, gender=?, nationality=?, role=? WHERE user_id=?";
+    pdo_execute($sql ,$full_name, $phone_number ,$address, $CCCD_id, $birth_date,$email, $user_name, $password, $gender, $nationality, $role,$user_id);
 }
 
 function user_delete($user_id){
@@ -27,7 +27,10 @@ function user_select_all(){
     $sql = "SELECT * FROM users where role = 2";
     return pdo_query($sql);
 }
-
+function user_select_staff(){
+    $sql = "SELECT * FROM users where role = 1";
+    return pdo_query($sql);
+}
 function user_select_by_id($user_id){
     $sql = "SELECT * FROM users WHERE user_id=?";
     return pdo_query_one($sql, $user_id);
