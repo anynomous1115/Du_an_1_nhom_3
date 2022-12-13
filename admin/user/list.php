@@ -5,7 +5,6 @@
 <form action="index.php?act=xoakh" method="POST">
 <table border="1">
     <tr>
-        <th></th>
         <th>STT</th>
         <th>Tên Khách Hàng</th>
         <th>Số điện thoại</th>
@@ -15,7 +14,7 @@
         <th>Email</th>
         <th>Giới tính</th>
         <th>Quốc tịch</th>
-        <th></th>
+        <th>Thao tác</th>
     </tr>
     
     <?php
@@ -26,7 +25,6 @@
         $xoa_user= "index.php?act=xoakh&user_id=". $user_id;
         echo '<input id="check'.$i.'" name = "user_id" type = "text" hidden>
         <tr>
-                <td><input id="box'.$i.'" type="checkbox" ></td>
                 <td>'.$i.'</td>
                 <td>' . $full_name . '</td>
                 <td>' . $phone_number . '</td>
@@ -37,7 +35,7 @@
                 <td>' . $gender . ' </td>
                 <td>' . $nationality . ' </td>
                 <td>
-                <a href="' . $xoa_user . '"> <input type="button" value="Xóa"></a>
+                <a href="' . $xoa_user . '"> <input type="button" value="Xóa" class = "btn-xoa"></a>
                 </td>
             </tr>
             <script>
@@ -57,10 +55,6 @@
     }
     ?>
 </table>
-
-<input type="button" id="check-all" value="Chọn tất cả">
-<input type="button" id="clear-all" value="Bỏ chọn tất cả">
-<input type="submit" value="Xóa các mục đã chọn">
 </form>
 
 <script>

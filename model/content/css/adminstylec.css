@@ -24,7 +24,7 @@ aside {
   width: 15%;
   background: #1b2a47;
   margin-right: 10px;
-  height: 2000px;
+  height: 3500px;
 }
 
 article {
@@ -131,16 +131,52 @@ h1{
   margin-top: 10px;
   margin-left: 10px;
 }
+
 input[type=text]{
-  width: 100%;
+  width: 500px;
+  height: 40px;
+}
+input[type=file]{
+  width: 500px;
+  height: 40px;
+}
+input[type=number]{
+  width: 500px;
+  height: 40px;
+}
+input[type=submit]{
+  width: 100px;
+  height: 40px;
+}
+input[type=button]{
+  width: 100px;
+  height: 40px;
+}
+input[type=reset]{
+  width: 100px;
+  height: 40px;
+}
+.form-message{
+  color: red;
+}
+textarea{
+  width: 500px;
 }
 .danhmuc{
+  height: 40px;
+  width: 500px;
   padding: 5px;
   border-radius: 5px;
   border: 1px solid #999;
   cursor: pointer;
   margin-top: 10px;
   margin-bottom: 10px;
+}
+#form-1{
+  display: grid;
+  grid-template-columns: 40% 40%;
+  grid-column-gap: 50px;
+  margin-left: 50px;
 }
 .btn-sua{
   background-color: #00c853;

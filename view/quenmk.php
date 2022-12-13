@@ -1,3 +1,8 @@
+<?php
+if(isset($_GET['mk'])){
+    echo'<script>alert("Email của bạn không có trên hệ thống, bạn vui lòng kiểm tra và thử lại")</script>';
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
