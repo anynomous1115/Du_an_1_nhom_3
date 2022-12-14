@@ -71,7 +71,7 @@ $d2 = ceil(($d - $d1) / 60 / 60 / 24);
                     echo ' <a href="' . $booking_room . '"><button><i class="fa-solid fa-cart-flatbed-suitcase"></i> <p>Đặt phòng</p></button></a>  
                                    
                         <button><p>Đặt tại khách sạn</p></button>';
-                    }else if($_SESSION['user']['role']==0){
+                    }else if(isset($_SESSION['user'])&&$_SESSION['user']['role']==0){
                          echo '<b>Admin không được đặt phòng</b>';
                     }else{
                         echo '<b>Bạn muốn đặt phòng vui lòng quay lại trang chủ tìm kiếm ngày</b>'; 

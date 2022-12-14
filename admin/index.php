@@ -52,10 +52,13 @@ if (isset($_GET['act'])) {
             include "type_room/update.php";
             break;
         case 'update_type_room':
-            if (isset($_POST['update']) && ($_POST['update'])) {
+            if (isset($_POST['type_name'])) {
                 $type_name = $_POST['type_name'];
                 $type_id = $_POST['type_id'];
-                type_update($type_id, $type_name);
+                $img_type = $_FILES['img_type']['name'];
+                $max_people = $_POST['max_people'];
+                $max_bed = $_POST['max_bed'];
+                type_update($type_id, $type_name, $img_type, $max_people, $max_bed);
             }
             $list_type_room = type_selectall();
             include "type_room/list.php";

@@ -53,7 +53,7 @@ function rooms_statistic(){
     return pdo_query($sql);
 }
 function booking($user_id){
-    $sql = "select ro.room_name,bk.booking_date, ro.img, start_date, end_date, into_money, status from  rooms ro join booking_detail bd on bd.room_id = ro.room_id join booking bk on bd.booking_id = bk.booking_id WHERE bk.user_id = ? ORDER BY end_date DESC";
+    $sql = "select ro.room_name, ro.room_id, bk.booking_date, ro.img, start_date, end_date, into_money, status from  rooms ro join booking_detail bd on bd.room_id = ro.room_id join booking bk on bd.booking_id = bk.booking_id WHERE bk.user_id = ? ORDER BY end_date DESC";
     return pdo_query($sql, $user_id);
 }
 function booking_user($room_id){
