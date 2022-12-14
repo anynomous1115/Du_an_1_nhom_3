@@ -120,7 +120,11 @@ if (isset($_SESSION['user'])) {
         foreach ($room as $roomct) {
             extract($roomct);
             $hinhs = $hinhpath . $img;
-            $link_room = "index.php?act=roomct&&room_id=" . $room_id . "&&checkin=" . $checkin . "&&checkout=" . $checkout;
+            if(isset($checkin)&&isset($checkout)){
+                $link_room = "index.php?act=roomct&&room_id=" . $room_id . "&&checkin=" . $checkin . "&&checkout=" . $checkout;
+            }else{
+                $link_room = "index.php?act=roomct&&room_id=" . $room_id ;
+            }
             echo '        <div class="product-relate-items">
     <a href="' . $link_room . '"><img src="' . $hinhs . '" alt=""></a>
     <h1>' . $room_name . '</h1>
