@@ -17,9 +17,9 @@ function type_delete($type_id){
     pdo_execute($sql,$type_id);
 }
 //cập nhật
-function type_update($type_id, $type_name){
-    $sql = "UPDATE type_room SET type_name=? WHERE type_id=?";
-    pdo_execute($sql, $type_name, $type_id);
+function type_update($type_id, $type_name, $img_type, $max_people, $max_bed){
+    $sql = "UPDATE type_room SET type_name=?, img_type=?, max_people =?, max_bed = ?  WHERE type_id=?";
+    pdo_execute($sql, $type_name, $img_type, $max_people, $max_bed, $type_id);
 }
 //lấy thông tin 1 mã loại
 function loai_getinfo($type_id){
