@@ -1,5 +1,5 @@
 <?php
-$room = room_select_by_id($_GET['room_id']);
+$room = room_feedback($_GET['room_id']);
 extract($room);
 $hinh = $hinhpath . $img;
 $checkin = $_GET['checkin'];
@@ -67,6 +67,7 @@ $sodem = floor($datediff / (60 * 60 * 24));
                         <a href="">
                             <p><?= $room_name ?></p>
                         </a>
+                        <i class="fa fa-thumbs-up"></i><a href="#"> <?= $danhgia ?> Đánh giá</a>
                     </div>
                 </div>
                 <div class="book_conntent_right_details">

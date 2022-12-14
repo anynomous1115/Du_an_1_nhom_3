@@ -27,7 +27,7 @@ $hinh = $hinhpath . $img;
                             <label for="">Chuyển khoản ngân hàng</label>
                         </div>
                         <div class="pay_content_left_method_payment_items_img">
-                            <p class="atm" style="display: none;">Bạn vui lòng chuyển khoản đến số tài khoản 096714921 MB Bank</p>
+                            <p class="atm" style="display: none;">Bạn vui lòng chuyển khoản đến số tài khoản 096714921 MB Bank<br> Chủ TK: Bùi Văn Huy</p>
                             <p class="atm" style="display: none;">Nội dung chuyển khoản là : Trả tiền thuê <?= $room_name ?> </p>
                         </div>
                     </div>

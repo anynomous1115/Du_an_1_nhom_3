@@ -82,12 +82,7 @@ if (is_file($hinhpath)) {
             errorSelector: '.form-message',
             rules: [
                 Validator.isRequired('#room_name', 'Vui lòng nhập tên phòng'),
-                Validator.isRequired('#img', 'Vui lòng chọn ảnh'),
-                Validator.isRequired('#img1', 'Vui lòng chọn ảnh'),
-                Validator.isRequired('#img2', 'Vui lòng chọn ảnh'),
-                Validator.isRequired('#img3', 'Vui lòng chọn ảnh'),
-                Validator.isRequired('#img4', 'Vui lòng chọn ảnh'),
-                Validator.isRequired('#img5', 'Vui lòng chọn ảnh'),
+                
                 Validator.isRequired('#description', 'Vui lòng mô tả'),
                 Validator.isRequired('#room_price', 'Vui lòng nhập giá phòng'),
             ]

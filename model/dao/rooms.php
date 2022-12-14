@@ -29,7 +29,11 @@ function room_image_insert($room_id, $room_img){
     pdo_execute($sql, $room_id, $room_img);
 }
 function room_image_update($room_image_id, $room_id, $room_img){
-    $sql = "update room_image set room_id =?, room_img=? where room_image_id= ?";
+    if($room_img!=""){
+        $sql = "update room_image set room_id ='".$room_id."', room_img='".$room_img."' where room_image_id= '".$room_image_id."'";
+    }else{
+        $sql = "update room_image set room_id ='".$room_id."' where room_image_id= '".$room_image_id."'";
+    }
     pdo_execute($sql, $room_id, $room_img, $room_image_id);
 }
 function room_insert($room_name, $img, $description, $room_price, $type_id, $img1, $img2, $img3, $img4, $img5){
@@ -46,7 +50,12 @@ function room_delete($room_id){
     pdo_execute($sql, $room_id);
 }
 function room_update($room_id, $room_name, $img, $description, $room_price, $type_id){
-    $sql = "update rooms set room_name =?, img=?, description=?, room_price=?, type_id=? where room_id= ?";
+    if($img!=""){
+        $sql = "update rooms set room_name = '".$room_name."' , img='".$img."', description='".$description."', room_price='".$room_price."', type_id='".$type_id."' where room_id= '".$room_id."'";
+    }else{
+        $sql = "update rooms set room_name = '".$room_name."' , description='".$description."', room_price='".$room_price."', type_id='".$type_id."' where room_id= '".$room_id."'";
+    }
+   
     pdo_execute($sql,$room_name, $img, $description, $room_price, $type_id, $room_id );
 }
 function room_getinfo($room_id){

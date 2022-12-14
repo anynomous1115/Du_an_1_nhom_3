@@ -9,21 +9,13 @@ if (isset($_SESSION['user'])) {
 } else {
     $booking_room = "index.php?act=dangnhap&&chuadangnhap=1";
 }
-$d1 = strtotime($checkin);
-$d = strtotime($checkout);
-$d2 = ceil(($d - $d1) / 60 / 60 / 24);
 ?>
 <section class="product">
     <div class="container">
         <div class="product-top">
             Chi tiết phòng:
         </div>
-        <?php foreach ($list_type as $type) {
-            if ($type['type_id'] == $type_id) {
-                echo  '<p>Loại phòng: </p> <input type="text" value="' . $type['type_name'] . '" id="typeroom" disabled>';
-            }
-        }
-        ?>
+        
 
         <?php
         echo    '<div class="product-content row">
@@ -40,6 +32,7 @@ $d2 = ceil(($d - $d1) / 60 / 60 / 24);
                 echo '<img src="'.$img.'" alt="">';
             }
             ?>
+            
             <!-- <img src="model/content/img/sp1.png" alt="">
             <img src="model/content/img/sp2.png" alt="">
             <img src="model/content/img/sp6.png" alt="">
@@ -47,14 +40,21 @@ $d2 = ceil(($d - $d1) / 60 / 60 / 24);
             <img src="model/content/img/sp7.png" alt=""> -->
         </div>
     </div>
+ 
     <?php echo '
 
-                <div class="product-content-right">
-                    <div class="product-content-right-name">
+                <div class="product-content-right">   
+                 <div class="product-content-right-name">
                         <h1>' . $room_name . '</h1>
                                
-                    </div>
-                    <div class="product-content-right-icon row">
+                    </div>';
+                    foreach ($list_type as $type) {
+                        if ($type['type_id'] == $type_id) {
+                            echo  '<p style="margin-left: 10px;">Loại phòng:  '. $type['type_name'] . '</p> ';
+                        }
+                    }
+                    echo '            
+                           <div class="product-content-right-icon row">
                         <div class="product-content-right-icon-item">
                         <i class="fa-solid fa-person"></i> <p>' . $max_people . ' người</p> 
                         </div>

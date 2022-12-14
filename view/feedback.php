@@ -86,7 +86,7 @@ $feedback = feedback_select_by_room($room_id);
         ?>
             <div class="binhluanform">
                 <form action="<?= $_SERVER['PHP_SELF']; ?>" method="post">
-                    <input type="hidden" name="user_id" value="<?php echo $user_id ?>">
+                    <input type="hidden" name="user_id" value="<?php echo $user ?>">
                     <input type="hidden" name="room_id" value="<?php echo $room_id ?>">
                     <textarea name="content" id="text" ></textarea><br>
                     <input type="submit" name="guibinhluan" value="Gửi phản hồi " id="nut">
@@ -99,9 +99,9 @@ $feedback = feedback_select_by_room($room_id);
         <?php
         if (isset($_POST['guibinhluan']) && $_POST['guibinhluan']) {
             $noidung = $_POST['content'];
-            $ma_hh = $_POST['user_id'];
+            $ma_hh = $_POST['room_id'];
             $ngaybl = date('Y/m/d');
-            $ma_kh = $_POST['room_id'];
+            $ma_kh = $_POST['user_id'];
             feedback_insert($noidung, $ma_hh, $ma_kh, $ngaybl);
             header("Location: " . $_SERVER['HTTP_REFERER']);
         }

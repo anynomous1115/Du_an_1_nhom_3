@@ -19,7 +19,7 @@
                 <td>'.$content.'</td>
                 <td>'.$feedback_date.'</td>
                 <td>'.$full_name.'</td>
-                <td><a href="'.$xoa.'"><input type="button" value="Xóa" class="btn-sua"></a></td>
+                <td><a href="'.$xoa.'"><input type="button" value="Xóa" class="btn-xoa"></a></td>
             </tr>
             ';
             }
