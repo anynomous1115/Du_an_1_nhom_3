@@ -64,7 +64,7 @@ if (empty($room_id)) {
                            <p id="note">'.$description.'</p>
                            <i class="fa-solid fa-hand-holding-dollar"></i><span id="span_price">' . $room_price . ' VNĐ</span>';
                 if (isset($_SESSION['user'])) {
-                    if (!$_SESSION['user']['role'] == 0) {
+                    if (!$_SESSION['user']['role'] == 0||!$_SESSION['user']['role'] == 1) {
                         echo ' <div class="roomId_btn"><a href="' . $booking_room . '"><button type="submit">Book Now</button></a></div>
                          </div>
                        </div>
