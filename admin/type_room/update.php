@@ -12,7 +12,7 @@ if (is_file($hinhpath)) {
 <div class="banner">
     <h1>CẬP NHẬT LOẠI PHÒNG</h1>
 </div>
-<form action="index.php?act=add_type_room" method="POST" enctype="multipart/form-data" name="forms" id="form-2">
+<form action="index.php?act=update_type_room" method="POST" enctype="multipart/form-data" name="forms" id="form-2">
 
     <div class="formk">
         <label for="">Tên loại</label> <br>
