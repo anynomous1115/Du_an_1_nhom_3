@@ -54,6 +54,7 @@ if (is_file($hinhpath)) {
             errorSelector: '.form-message',
             rules: [
                 Validator.isRequired('#type_name', 'Vui lòng nhập tên loại phòng'),
+                Validator.isRequired('#img_type', 'Vui lòng chọn ảnh'),
                 Validator.isRequired('#max_people', 'Vui lòng số người'),
                 Validator.isRequired('#max_bed', 'Vui lòng nhập số giường'),
             ]
