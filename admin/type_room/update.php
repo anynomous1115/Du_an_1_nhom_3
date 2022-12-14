@@ -12,7 +12,7 @@ if (is_file($hinhpath)) {
 <div class="banner">
     <h1>CẬP NHẬT LOẠI PHÒNG</h1>
 </div>
-<form action="index.php?act=add_type_room" method="POST" enctype="multipart/form-data" name="forms" id="form-2">
+<form action="index.php?act=update_type_room" method="POST" enctype="multipart/form-data" name="forms" id="form-2">
 
     <div class="formk">
         <label for="">Tên loại</label> <br>
@@ -35,6 +35,7 @@ if (is_file($hinhpath)) {
         <input type="number" min=1 name="max_bed" id="max_bed" value="<?= $max_bed ?>">
         <p class="form-message"></p>
     </div>
+    <input type="text" name="type_id" hidden value="<?=$type_id?>">
     <div>
         <input type="submit" name="update" value="Cập nhật">
         <a href="index.php?act=list_type_room"><input type="button" value="Danh sách"></a>
@@ -53,7 +54,6 @@ if (is_file($hinhpath)) {
             errorSelector: '.form-message',
             rules: [
                 Validator.isRequired('#type_name', 'Vui lòng nhập tên loại phòng'),
-                Validator.isRequired('#img_type', 'Vui lòng chọn ảnh'),
                 Validator.isRequired('#max_people', 'Vui lòng số người'),
                 Validator.isRequired('#max_bed', 'Vui lòng nhập số giường'),
             ]

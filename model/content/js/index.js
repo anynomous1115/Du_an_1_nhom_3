@@ -169,7 +169,6 @@ Validator.isRequired = function (selector, message) {
         }
     };
 }
-
 Validator.isEmail = function (selector, message) {
     return {
         selector: selector,
