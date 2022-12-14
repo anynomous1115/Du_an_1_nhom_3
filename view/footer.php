@@ -2,9 +2,9 @@
             <div class="add">
                 <p><i class="fa-solid fa-location-dot"></i> Tòa nhà FPT Polytechnic, P. Trịnh Văn Bô, Xuân Phương, Nam
                     Từ Liêm, Hà Nội</p>
-                <p><i class="fa-regular fa-envelope"></i> : caosonhai1410@gmail.com</p>
-                <p><i class="fa-solid fa-phone"></i> 0823102898</p>
-                <p><i class="fa-solid fa-phone"></i> 0823102898</p>
+                <p><i class="fa-regular fa-envelope"></i> : hoteliq102@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i> 0988888888</p>
+                <p><i class="fa-solid fa-phone"></i> 0982828282</p>
             </div>
             <div class="nav" id="nav_footer">
                 <ul>
