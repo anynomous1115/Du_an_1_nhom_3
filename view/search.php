@@ -27,7 +27,7 @@ if (empty($room_id)) {
         <form action="index.php?act=search" method="POST">
             <div class="checkIn">
                 <div class="label"><label for="inputEmail4">Ngày Bắt Đầu</label><br></div>
-                <div class="input"><input type="date" value="<?= $checkIn ?>"  class="form-control" name="checkIn" required></div>
+                <div class="input"><input type="date" value="<?= $checkIn ?>" class="form-control" name="checkIn" required></div>
             </div>
             <div class="checkOut">
                 <div class="label"><label for="inputEmail4">Ngày Kết Thúc</label><br></div>

@@ -58,7 +58,12 @@ if (isset($_GET['act'])) {
                 $img_type = $_FILES['img_type']['name'];
                 $max_people = $_POST['max_people'];
                 $max_bed = $_POST['max_bed'];
-                type_update($type_id, $type_name, $img_type, $max_people, $max_bed);
+                $target_dir = "../model/content/img/";
+                $target_file = $target_dir . basename($_FILES["img_type"]["name"]);
+                if (move_uploaded_file($_FILES["img_type"]["tmp_name"], $target_file)){
+                    type_update($type_id, $type_name, $img_type, $max_people, $max_bed);
+                }
+                
             }
             $list_type_room = type_selectall();
             include "type_room/list.php";
